@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import './app/styles/general.scss';
+
+@media screen and (min-width: 0px) and (max-width: 599px) {
+  @import './app/styles/smartphone.scss';
+}
+
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  @import './app/styles/tablet.scss';
+}
+
+@media screen and (min-width: 960px) {
+  @import './app/styles/desktop.scss';
+}

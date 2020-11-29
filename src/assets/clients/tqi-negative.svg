@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="97.722008"
+   height="38.944996"
+   viewBox="0 0 97.722004 38.944996"
+   version="1.1"
+   id="svg11"
+   sodipodi:docname="tqi-negative.svg"
+   inkscape:version="1.0.1 (1.0.1+r73)">
+  <metadata
+     id="metadata17">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs15" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2560"
+     inkscape:window-height="1043"
+     id="namedview13"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="5.3790623"
+     inkscape:cx="28.777469"
+     inkscape:cy="48.058962"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="logo-menu" />
+  <g
+     id="logo-menu"
+     transform="translate(-358.72796,-6.4172471)">
+    <g
+       id="Grupo_5991"
+       data-name="Grupo 5991"
+       transform="translate(0,2)">
+      <rect
+         id="Retângulo_5"
+         data-name="Retângulo 5"
+         width="168.54401"
+         height="112"
+         transform="translate(356)"
+         fill="none"
+         x="0"
+         y="0" />
+      <g
+         id="Grupo_2"
+         data-name="Grupo 2"
+         transform="translate(388.328,31.706)" />
+    </g>
+    <path
+       id="Caminho_1"
+       data-name="Caminho 1"
+       d="m 358.72796,6.9532428 v 4.8840002 h 14.236 v 22.236 h 9.426 v -22.3 l 14.34,-0.007 -0.005,-4.8180002 z"
+       fill="#ffffff" />
+    <path
+       id="Caminho_2"
+       data-name="Caminho 2"
+       d="m 406.93996,30.182243 c 10.994,0.574 6.532,6.127 0.573,15.18 8.83,-10.282 15.76,-14.881 14.843,-16.583 -0.742,-1.4 -6.622,-0.1 -15.416,1.4"
+       fill="#ed1c29"
+       style="fill:#ffffff" />
+    <path
+       id="Caminho_3"
+       data-name="Caminho 3"
+       d="m 439.06596,9.6052428 c -2.038,-4.923 -14.6,-4.044 -28.066,1.9430002 -13.466,5.987 -22.725,14.836 -20.694,19.748 1.575,3.8 9.4,4.145 19.073,1.359 -4.859,0.619 -8.775,-0.523 -10.135,-3.391 -2.18,-4.594 3.05,-11.872 11.671,-16.258 8.621,-4.3860002 17.371,-4.2150002 19.546,0.373 1.8,3.8 -1.477,9.451 -7.552,13.768 10.939,-5.791 17.96,-13.207 16.157,-17.5420002"
+       fill="#ffffff" />
+    <rect
+       id="Retângulo_2"
+       data-name="Retângulo 2"
+       width="9.4890003"
+       height="27.121"
+       fill="#ffffff"
+       x="446.96097"
+       y="6.9522419" />
+  </g>
+</svg>

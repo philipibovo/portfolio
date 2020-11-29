@@ -1,0 +1,236 @@
+<!-- #about -->
+<section
+  id="about"
+  [class.landscape]="global.isLandscape"
+  [class.portrait]="global.isPortrait"
+  (window:resize)="scripts.resizedWindow()"
+>
+  <!-- .email -->
+  <div class="email">philipi@bovo.me</div>
+  <!-- end .email -->
+
+  <!-- .content -->
+  <div class="content">
+    <!-- .logo -->
+    <div class="logo">
+      <div class="image">
+        <img
+          src="../../../assets/logo/logo-white.svg"
+          alt="Logo Philipi Bovo"
+        />
+      </div>
+
+      <div class="text">Philipi Bovo</div>
+    </div>
+    <!-- end .logo -->
+
+    <!-- .social -->
+    <div class="social">
+      <!-- #icon-linkedin -->
+      <div
+        id="icon-linkedin"
+        class="social-icon hint--bottom"
+        [class]="global.socialIconTheme"
+        aria-label="Linkedin"
+      >
+        <a href="https://www.linkedin.com/in/philipi-bovo/" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+      <!-- end #icon-linkedin -->
+
+      <!-- #icon-github -->
+      <div
+        id="icon-github"
+        class="social-icon hint--bottom"
+        [class]="global.socialIconTheme"
+        aria-label="Github"
+      >
+        <a href="https://github.com/philipibovo" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- end #icon-github -->
+
+      <!-- #icon-cv -->
+      <div
+        id="icon-cv"
+        class="social-icon hint--bottom"
+        [class]="global.socialIconTheme"
+        aria-label="Curriculum Vitae"
+        (click)="scripts.openCvNewTab()"
+      >
+        <i class="far fa-address-card"></i>
+      </div>
+      <!-- end #icon-cv -->
+    </div>
+    <!-- end social -->
+
+    <!-- .main -->
+    <div class="main">
+      <!-- .item .first -->
+      <div class="item first">
+        <!-- .title -->
+        <div class="title">
+          <div *ngIf="global.lang === 'en'">
+            Front End Developer & UX Enthusiast
+          </div>
+
+          <div *ngIf="global.lang === 'pt'">
+            Desenvolvedor Front End & Entusiasta em UX
+          </div>
+        </div>
+        <!-- end .title -->
+
+        <!-- .subtitle -->
+        <div class="subtitle">
+          <div *ngIf="global.lang === 'en'">
+            I like to create simple, objective and intuitive things.
+          </div>
+
+          <div *ngIf="global.lang === 'pt'">
+            Gosto de criar coisas simples, objetivas e intuitivas.
+          </div>
+        </div>
+      </div>
+      <!-- end .item .first -->
+
+      <!-- .item .decond -->
+      <div class="item second">
+        <div>Hello World,</div>
+
+        <div *ngIf="global.lang === 'en'">
+          I have dual natiolities, I'm Brazilan and Portuguese. Graduated in
+          Computer Science, I started my career as a developer in 2009, worked
+          for pharmaceutical, financial, logistics, insurance and internet
+          companies, and make services as a freelancer too, always collaborating
+          with my talent and creativity to create responsive, multi-platform
+          products, user-friendly, making the user experience more intuitive.
+          Curious by nature, I am always looking for new learning , always
+          improving professionally.
+        </div>
+
+        <div *ngIf="global.lang === 'pt'">
+          Luso-Brasileiro, formado em Ciência da Computação, iniciei minha
+          carreira como desenvolvedor em 2009, trabalhei para empresas dos
+          setores varejistas, farmacêuticos, financeiros, logísticos, seguros e
+          internet, e fiz diversos serviços como freelancer, sempre colaborando
+          com meu talento e criatividade para criar produtos responsivos e
+          multi-plataformas, amigáveis aos usuários, tornando a experiência de
+          uso mais intuitiva. Curioso por natureza, estou sempre atrás de novos
+          aprendizados, sempre melhorando profissionalemte.
+        </div>
+      </div>
+      <!-- end .item .second -->
+    </div>
+    <!-- end .main -->
+  </div>
+  <!-- end .content -->
+</section>
+<!-- end #about -->
+
+<!-- #tools -->
+<section
+  id="tools"
+  [class.landscape]="global.isLandscape"
+  [class.portrait]="global.isPortrait"
+>
+  <app-tools></app-tools>
+</section>
+<!-- end #tools -->
+
+<!-- #projects -->
+<section
+  id="projects"
+  [class.landscape]="global.isLandscape"
+  [class.portrait]="global.isPortrait"
+>
+  <app-projects></app-projects>
+</section>
+<!-- end #projects -->
+
+<!-- #jobs -->
+<section
+  id="jobs"
+  [class.landscape]="global.isLandscape"
+  [class.portrait]="global.isPortrait"
+>
+  <app-jobs></app-jobs>
+</section>
+<!-- end #jobs -->
+
+<!-- #clients -->
+<section
+  id="clients"
+  [class.landscape]="global.isLandscape"
+  [class.portrait]="global.isPortrait"
+>
+  <app-clients></app-clients>
+</section>
+<!-- end #clients -->
+
+<!-- #arrow-page-up -->
+<div
+  *ngIf="global.isDesktop && !global.isFirstSection"
+  id="arrow-page-up"
+  [class]="global.arrowUpTheme"
+  (click)="scripts.movePage('up', global.currentViewHeight, totalSections)"
+>
+  <div>
+    <div></div>
+    <div></div>
+  </div>
+  <div>
+    <div></div>
+    <div></div>
+  </div>
+  <div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- end #arrow-page-up -->
+
+<!-- #arrow-page-down -->
+<div
+  *ngIf="global.isDesktop && !global.isLastSection"
+  id="arrow-page-down"
+  [class]="global.arrowDownTheme"
+  (click)="scripts.movePage('down', global.currentViewHeight, totalSections)"
+>
+  <div>
+    <div></div>
+    <div></div>
+  </div>
+  <div>
+    <div></div>
+    <div></div>
+  </div>
+  <div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- end #arrow-page-down -->
+
+<!-- #lang-icon -->
+<div id="lang-icon">
+  <div
+    *ngIf="global.lang === 'en'"
+    class="hint--left"
+    aria-label="Versão em Protuguês"
+    (click)="scripts.setLang('pt')"
+  >
+    <img src="../assets/icons/brazil-flag.png" alt="Icon Brazil Flag" />
+  </div>
+
+  <div
+    *ngIf="global.lang === 'pt'"
+    class="hint--left"
+    aria-label="English Version"
+    (click)="scripts.setLang('en')"
+  >
+    <img src="../assets/icons/uk-flag.png" alt="Icon UK Flag" />
+  </div>
+</div>
+<!-- end #lang-icon -->
