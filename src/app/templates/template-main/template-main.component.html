@@ -63,6 +63,32 @@
         <i class="far fa-address-card"></i>
       </div>
       <!-- end #icon-cv -->
+
+      <!-- #icon-lang -->
+      <div
+        *ngIf="global.lang === 'en'"
+        id="icon-lang"
+        class="social-icon hint--left"
+        [class]="global.socialIconTheme"
+        aria-label="Versão em Protuguês"
+        (click)="scripts.setLang('pt')"
+      >
+        <img src="../assets/icons/brazil-flag.png" alt="Icon Brazil Flag" />
+      </div>
+      <!-- end #icon-lang -->
+
+      <!-- #icon-lang -->
+      <div
+        *ngIf="global.lang === 'pt'"
+        id="icon-lang"
+        class="social-icon hint--left"
+        [class]="global.socialIconTheme"
+        aria-label="English Version"
+        (click)="scripts.setLang('en')"
+      >
+        <img src="../assets/icons/uk-flag.png" alt="Icon UK Flag" />
+      </div>
+      <!-- end #icon-lang -->
     </div>
     <!-- end social -->
 
@@ -212,25 +238,3 @@
   </div>
 </div>
 <!-- end #arrow-page-down -->
-
-<!-- #lang-icon -->
-<div id="lang-icon">
-  <div
-    *ngIf="global.lang === 'en'"
-    class="hint--left"
-    aria-label="Versão em Protuguês"
-    (click)="scripts.setLang('pt')"
-  >
-    <img src="../assets/icons/brazil-flag.png" alt="Icon Brazil Flag" />
-  </div>
-
-  <div
-    *ngIf="global.lang === 'pt'"
-    class="hint--left"
-    aria-label="English Version"
-    (click)="scripts.setLang('en')"
-  >
-    <img src="../assets/icons/uk-flag.png" alt="Icon UK Flag" />
-  </div>
-</div>
-<!-- end #lang-icon -->

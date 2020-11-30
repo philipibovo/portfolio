@@ -34,7 +34,6 @@ export class ScriptGeneral {
       offSetTop >= windowHeight * 2 - 2 &&
       offSetTop < windowHeight * 3 - 2
     ) {
-      console.log(2);
       this.global.currentSection = 2;
       this.activeSection(2);
       document
@@ -44,14 +43,12 @@ export class ScriptGeneral {
       offSetTop >= windowHeight * 3 - 2 &&
       offSetTop < windowHeight * 4 - 2
     ) {
-      console.log(3);
       this.global.currentSection = 3;
       this.activeSection(3);
       document
         .querySelector('#about .content > .social')
-        ?.classList.add('vFixed');
+        ?.classList.add('vFixed2');
     } else {
-      console.log(4);
       this.global.currentSection = 4;
       this.activeSection(4);
       document
@@ -106,12 +103,27 @@ export class ScriptGeneral {
   };
   // end openCvNewTab = ()
 
+  openNewTab = (url: string) => {
+    window.open(url, '_blank');
+  };
+  // end openNewTab = (url: string)
+
   activeSection = (sectionNumber: number) => {
     let diffZero: boolean;
+
+    console.log(new Date());
 
     document.querySelectorAll('section').forEach((element) => {
       element.classList.remove('active');
     });
+
+    document
+      .querySelector('#about .content > .social')
+      ?.classList.remove('vFixed');
+
+    document
+      .querySelector('#about .content > .social')
+      ?.classList.remove('vFixed2');
 
     switch (sectionNumber) {
       case 0:
@@ -121,7 +133,6 @@ export class ScriptGeneral {
         this.global.socialIconTheme = 'light';
         this.global.isFirstSection = true;
         this.global.isLastSection = false;
-        document.querySelector('#lang-icon')?.classList.remove('centered');
         diffZero = false;
         break;
 
@@ -132,19 +143,27 @@ export class ScriptGeneral {
         this.global.socialIconTheme = 'dark';
         this.global.isFirstSection = false;
         this.global.isLastSection = false;
-        document.querySelector('#lang-icon')?.classList.add('centered');
         diffZero = true;
+
+        document
+          .querySelector('#about .content > .social')
+          ?.classList.add('vFixed');
+
         break;
 
       case 2:
         document.querySelector(`#projects`)?.classList.add('active');
-        this.global.arrowUpTheme = 'dark';
-        this.global.arrowDownTheme = 'dark';
+        this.global.arrowUpTheme = 'light';
+        this.global.arrowDownTheme = 'light';
         this.global.socialIconTheme = 'dark';
         this.global.isFirstSection = false;
         this.global.isLastSection = false;
-        document.querySelector('#lang-icon')?.classList.add('centered');
         diffZero = true;
+
+        document
+          .querySelector('#about .content > .social')
+          ?.classList.add('vFixed');
+
         break;
 
       case 3:
@@ -154,8 +173,12 @@ export class ScriptGeneral {
         this.global.socialIconTheme = 'light';
         this.global.isFirstSection = false;
         this.global.isLastSection = false;
-        document.querySelector('#lang-icon')?.classList.add('centered');
         diffZero = true;
+
+        document
+          .querySelector('#about .content > .social')
+          ?.classList.add('vFixed2');
+
         break;
 
       case 4:
@@ -165,8 +188,12 @@ export class ScriptGeneral {
         this.global.socialIconTheme = 'light';
         this.global.isFirstSection = false;
         this.global.isLastSection = true;
-        document.querySelector('#lang-icon')?.classList.add('centered');
         diffZero = true;
+
+        document
+          .querySelector('#about .content > .social')
+          ?.classList.add('vFixed');
+
         break;
 
       default:
@@ -224,20 +251,6 @@ export class ScriptGeneral {
     window.scrollTo(0, windowHeight * this.global.currentSection);
 
     this.activeSection(this.global.currentSection);
-
-    if (this.global.currentSection > 0) {
-      setTimeout(() => {
-        document
-          .querySelector('#about .content > .social')
-          ?.classList.add('vFixed');
-      }, 300);
-    } else {
-      setTimeout(() => {
-        document
-          .querySelector('#about .content > .social')
-          ?.classList.remove('vFixed');
-      }, 300);
-    }
   };
   // end movePage = (direction: string, windowHeight: number, totalSections: number)
 

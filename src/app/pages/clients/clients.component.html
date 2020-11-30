@@ -1,1 +1,61 @@
-<p>clients works!</p>
+<div class="content">
+  <div class="title">
+    <div class="text">
+      <div *ngIf="global.lang === 'en'">Clients</div>
+      <div *ngIf="global.lang === 'pt'">Clientes</div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="line">
+      <div class="item" id="logo-roadcard">
+        <img
+          src="../../../assets/clients/roadcard-negative.svg"
+          alt="Logo Roadcard"
+          (click)="scripts.openNewTab('https://www.roadcard.com.br/')"
+        />
+      </div>
+
+      <div class="item" id="logo-pamcary">
+        <img
+          src="../../../assets/clients/pamcary-negative.png"
+          alt="Logo Pamcary"
+          (click)="scripts.openNewTab('https://www.gps-pamcary.com.br/')"
+        />
+      </div>
+
+      <div class="item" id="logo-tqi">
+        <img
+          src="../../../assets/clients/tqi-negative.svg"
+          alt="Logo TQI"
+          (click)="scripts.openNewTab('https://www.tqi.com.br/')"
+        />
+      </div>
+    </div>
+
+    <div class="line">
+      <div class="item" id="logo-asia">
+        <img
+          src="../../../assets/clients/asia-negative.svg"
+          alt="Logo Asia Shipping"
+          (click)="scripts.openNewTab('https://www.asiashipping.co/')"
+        />
+      </div>
+
+      <div class="item" id="logo-agv">
+        <img
+          src="../../../assets/clients/agv-negative.svg"
+          alt="Logo AGV Logística"
+          (click)="scripts.openNewTab('https://www.agv.com.br/')"
+        />
+      </div>
+
+      <div class="item" id="logo-localcred">
+        <img
+          src="../../../assets/clients/localcred-negative.png"
+          alt="Logo Localcred"
+        />
+      </div>
+    </div>
+  </div>
+</div>
