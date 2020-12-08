@@ -5,6 +5,7 @@ html {
 body {
   background: url('../../assets/bg/bg-section-1.png');
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 section {
@@ -920,7 +921,394 @@ section {
 // end #projects
 
 #jobs {
-  background: gray;
+  // #jobs .content
+  .content {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // #jobs .content > .title
+    > .title {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 200px;
+      height: 75px;
+      font-size: 4rem;
+      color: transparent;
+      -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: white;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      > div {
+        position: absolute;
+        right: 100%;
+        transition-delay: 500ms;
+      }
+    }
+    // #jobs .content > .main
+    > .main {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      // #jobs .content > .main > .list
+      > .list {
+        margin-left: 200vw;
+        width: 100%;
+        color: #f7f7f7;
+        overflow: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        transition: all 500ms;
+        transition-delay: 500ms;
+        // #jobs .content > .main > .list > .item
+        > .item {
+          flex: none;
+          width: 300px;
+          padding: 0 20px;
+          scroll-snap-align: start;
+          // #jobs .content > .main > .list > .item > .wrap
+          > .wrap {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            // #jobs .content > .main > .list > .item > .wrap > .image
+            > .image {
+              width: 100%;
+              height: 150px;
+              text-align: center;
+              border-radius: 5px 5px 0 0;
+              background: rgba(247, 247, 247, 0.3);
+              // #jobs .content > .main > .list > .item > .wrap > .image > img
+              > img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: 5px 5px 0 0;
+              }
+            }
+            // #jobs .content > .main > .list > .item > .wrap > .text
+            > .text {
+              height: 50%;
+              padding: 20px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+      // #jobs .content > .main > .arrows
+      > .arrows {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        color: #f7f7f7;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        font-size: 1.5rem;
+        opacity: 0;
+        transition: all 300ms;
+        // #jobs .content > .main > .arrows > .arrow
+        > .arrow {
+          margin: 0 10px;
+          // #jobs .content > .main > .arrows > i
+          > i {
+            opacity: 1;
+            cursor: pointer;
+            transition: all 300ms;
+            // #jobs .content > .main > .arrows > i >.arrow.disabled
+            &.disabled {
+              opacity: 0.4;
+              cursor: default;
+              transition: all 300ms;
+            }
+          }
+        }
+      }
+    }
+  }
+  // #jobs.active
+  &.active {
+    // #jobs.active .content
+    .content {
+      // #jobs.active .content > .title
+      > .title {
+        // #jobs.active .content > .title > div
+        > div {
+          // #jobs.active .content > .title > div:nth-child(1)
+          &:nth-child(1) {
+            right: 108px;
+            transition: all 300ms;
+            transition-delay: 1000ms;
+          }
+          // #jobs.active .content > .title > div:nth-child(2)
+          &:nth-child(2) {
+            right: 71px;
+            transition: all 300ms;
+            transition-delay: 800ms;
+          }
+          // #jobs.active .content > .title > div:nth-child(3)
+          &:nth-child(3) {
+            right: 34px;
+            transition: all 300ms;
+            transition-delay: 600ms;
+          }
+          // #jobs.active .content > .title > div:nth-child(4)
+          &:nth-child(4) {
+            right: 0px;
+            transition: all 300ms;
+            transition-delay: 400ms;
+          }
+        }
+      }
+      // #jobs.active .content > .main
+      > .main {
+        > .list {
+          margin-left: 0;
+          transition: all 500ms;
+          transition-delay: 500ms;
+        }
+        // #jobs.active .content > .main > .arrows
+        > .arrows {
+          opacity: 1;
+          transition: all 300ms;
+          transition-delay: 1s;
+        }
+      }
+    }
+  }
+  // #jobs .gallery
+  .gallery {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    z-index: -5;
+    transition: all 500ms;
+    // #jobs .gallery.show
+    &.show {
+      opacity: 1;
+      z-index: 997;
+      transition: opacity 500ms;
+    }
+    // #jobs .gallery > .top
+    > .top {
+      width: 100%;
+      height: 50px;
+      padding: 0 20px;
+      border-bottom: 1px solid #444444;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      // #jobs .gallery > .top > .title
+      > .title {
+        color: rgba(247, 247, 247, 1);
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+        // #jobs .gallery > .top > .title > .text
+        > .text {
+          font-size: 1.5rem;
+          font-weight: 300;
+          cursor: default;
+        }
+        // #jobs .gallery > .top > .title > .link
+        > .link {
+          font-size: 1rem;
+          font-weight: 300;
+          padding-bottom: 3px;
+          margin-left: 10px;
+          // #jobs .gallery > .top > .title > .link > a
+          a {
+            color: rgba(247, 247, 247, 1);
+            text-decoration: none;
+            transition: all 150ms;
+            &:active,
+            &:visited {
+              color: rgba(247, 247, 247, 1);
+              text-decoration: none;
+              transition: all 150ms;
+            }
+            &:hover {
+              text-decoration: underline;
+              transition: all 150ms;
+            }
+          }
+        }
+      }
+      // #jobs .gallery > .top > .close
+      > .close {
+        font-size: 1.5rem;
+        color: rgba(247, 247, 247, 0.5);
+        cursor: pointer;
+        // #jobs .gallery > .top > .close:hover
+        &:hover {
+          color: rgba(247, 247, 247, 1);
+          transition: all 150ms;
+        }
+      }
+    }
+    // #jobs .gallery > .main
+    > .main {
+      position: relative;
+      height: calc(100% - 160px);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      // #jobs .gallery > .main > .arrow
+      > .arrow {
+        padding: 20px;
+        height: 100%;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: rgba(247, 247, 247, 0.5);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        transition: all 150ms;
+        // #jobs .gallery > .main > .arrow:hover
+        &:hover {
+          color: rgba(247, 247, 247, 1);
+          transition: all 150ms;
+        }
+        &.disabled {
+          opacity: 0;
+          cursor: default;
+        }
+      }
+      // #jobs .gallery > .main > .item
+      > .item {
+        opacity: 0;
+        position: absolute;
+        top: 20px;
+        left: 60px;
+        width: calc(100% - 120px);
+        height: calc(100% - 40px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        z-index: -5;
+        transition: all 300ms;
+        // #jobs .gallery > .main > .item.show
+        &.show {
+          opacity: 1;
+          z-index: 998;
+          transition: all 300ms;
+        }
+        // #jobs .gallery > .main > .item > img
+        > img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    // #jobs .gallery > .bottom
+    > .bottom {
+      height: 120px;
+      border-top: 1px solid #444444;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      // #jobs .gallery > .bottom > .arrow
+      > .arrow {
+        height: 100%;
+        width: 55px;
+        font-size: 1.3rem;
+        padding: 20px;
+        color: rgba(247, 247, 247, 0.5);
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        transition: all 150ms;
+        // #jobs .gallery > .bottom > .arrow:hover
+        &:hover {
+          color: rgba(247, 247, 247, 1);
+          transition: all 150ms;
+        }
+        // #jobs .gallery > .bottom > .arrow.disabled
+        &.disabled {
+          opacity: 0;
+          cursor: default;
+        }
+      }
+      // #jobs .gallery > .bottom > .list
+      > .list {
+        height: 100%;
+        width: calc(100% - 110px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        // #jobs .gallery > .bottom > .list > .item
+        > .item {
+          height: 80px;
+          width: 100px;
+          min-width: 100px;
+          margin: 10px;
+          scroll-snap-align: start;
+          cursor: pointer;
+          background: #000000;
+          // #jobs .gallery > .bottom > .list > .item > img
+          > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 3px;
+            opacity: 0.7;
+            transition: all 150ms;
+            // #jobs .gallery > .bottom > .list > .item > img:hover
+            &:hover {
+              opacity: 1;
+              transition: all 150ms;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // end #jobs
 

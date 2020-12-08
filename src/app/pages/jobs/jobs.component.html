@@ -1,1 +1,323 @@
-<p>jobs works!</p>
+<div class="content">
+  <div class="title">
+    <div>J</div>
+    <div>o</div>
+    <div>b</div>
+    <div>s</div>
+  </div>
+
+  <div class="main">
+    <div class="list" id="list-jobs">
+      <div class="item">
+        <div class="wrap" (click)="showHideJobGallery('job-sistema-pamcard')">
+          <div class="image">
+            <img src="../../../assets/jobs/sistemaPamcard/cover.png" alt="" />
+          </div>
+
+          <div class="text">Sistema Pamcary</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="wrap">
+          <div class="image">img</div>
+
+          <div class="text">Texto</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="wrap">
+          <div class="image">img</div>
+
+          <div class="text">Texto</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="wrap">
+          <div class="image">img</div>
+
+          <div class="text">Texto</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="wrap">
+          <div class="image">img</div>
+
+          <div class="text">Texto</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="wrap">
+          <div class="image">img</div>
+
+          <div class="text">Texto</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="wrap">
+          <div class="image">img</div>
+
+          <div class="text">Texto</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="wrap">
+          <div class="image">img</div>
+
+          <div class="text">Texto</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="wrap">
+          <div class="image">img</div>
+
+          <div class="text">Texto</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="wrap">
+          <div class="image">img</div>
+
+          <div class="text">Texto</div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="arrows.show" class="arrows">
+      <div class="arrow" id="jobs-arrow-left">
+        <i
+          class="fas fa-arrow-alt-circle-left"
+          [class.disabled]="!arrows.left"
+          (click)="scrollHorizontalByClick($event, 'left')"
+        ></i>
+      </div>
+
+      <div class="arrow" id="jobs-arrow-right">
+        <i
+          class="fas fa-arrow-alt-circle-right"
+          [class.disabled]="!arrows.right"
+          (click)="scrollHorizontalByClick($event, 'right')"
+        ></i>
+      </div>
+    </div>
+  </div>
+  <!-- end .main -->
+</div>
+
+<div class="gallery" id="job-sistema-pamcard">
+  <div class="top">
+    <div class="title">
+      <div class="text">Sistema Pamcard</div>
+
+      <div class="link">
+        <a href="https://www.roadcard.com.br/sistemapamcard/" target="_blank">
+          <div *ngIf="global.lang === 'en'">(Visit HTML Version)</div>
+          <div *ngIf="global.lang === 'pt'">(Veja a Versão HTML)</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="close" (click)="showHideJobGallery('job-sistema-pamcard')">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+  <!-- end .top -->
+
+  <div class="main">
+    <div
+      class="arrow"
+      [class.disabled]="galleryArrowLeftDisabled"
+      (click)="
+        showPrevNextJobItemGallery($event, 'job-sistema-pamcard-', 'prev')
+      "
+    >
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    <div
+      class="arrow"
+      [class.disabled]="galleryArrowRightDisabled"
+      (click)="
+        showPrevNextJobItemGallery($event, 'job-sistema-pamcard-', 'next')
+      "
+    >
+      <i class="fas fa-chevron-right"></i>
+    </div>
+
+    <div class="item show" id="job-sistema-pamcard-1">
+      <img src="../../../assets/jobs/sistemaPamcard/1.png" alt="" />
+    </div>
+
+    <div class="item" id="job-sistema-pamcard-2">
+      <img src="../../../assets/jobs/sistemaPamcard/2.png" alt="" />
+    </div>
+
+    <div class="item" id="job-sistema-pamcard-3">
+      <img src="../../../assets/jobs/sistemaPamcard/3.png" alt="" />
+    </div>
+
+    <div class="item" id="job-sistema-pamcard-4">
+      <img src="../../../assets/jobs/sistemaPamcard/4.png" alt="" />
+    </div>
+
+    <div class="item" id="job-sistema-pamcard-5">
+      <img src="../../../assets/jobs/sistemaPamcard/5.png" alt="" />
+    </div>
+
+    <div class="item" id="job-sistema-pamcard-6">
+      <img src="../../../assets/jobs/sistemaPamcard/6.png" alt="" />
+    </div>
+
+    <div class="item" id="job-sistema-pamcard-7">
+      <img src="../../../assets/jobs/sistemaPamcard/7.png" alt="" />
+    </div>
+
+    <div class="item" id="job-sistema-pamcard-8">
+      <img src="../../../assets/jobs/sistemaPamcard/8.png" alt="" />
+    </div>
+
+    <div class="item" id="job-sistema-pamcard-9">
+      <img src="../../../assets/jobs/sistemaPamcard/9.png" alt="" />
+    </div>
+
+    <div class="item" id="job-sistema-pamcard-10">
+      <img src="../../../assets/jobs/sistemaPamcard/10.png" alt="" />
+    </div>
+
+    <div class="item" id="job-sistema-pamcard-11">
+      <img src="../../../assets/jobs/sistemaPamcard/11.png" alt="" />
+    </div>
+
+    <div class="item" id="job-sistema-pamcard-12">
+      <img src="../../../assets/jobs/sistemaPamcard/12.png" alt="" />
+    </div>
+  </div>
+  <!-- end .main -->
+
+  <div class="bottom">
+    <div
+      class="arrow"
+      [class.disabled]="galleryListArrowLeftDisabled"
+      (click)="
+        scrollHorizontalGalleryList($event, 'left', 'job-sistema-pamcard-list')
+      "
+    >
+      <i class="fas fa-chevron-left"></i>
+    </div>
+
+    <div class="list" id="job-sistema-pamcard-list">
+      <div
+        class="item"
+        (click)="showJobItemGallery('job-sistema-pamcard-1', 1)"
+      >
+        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-1.png" alt="" />
+      </div>
+
+      <div
+        class="item"
+        (click)="showJobItemGallery('job-sistema-pamcard-2', 2)"
+      >
+        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-2.png" alt="" />
+      </div>
+
+      <div
+        class="item"
+        (click)="showJobItemGallery('job-sistema-pamcard-3', 3)"
+      >
+        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-3.png" alt="" />
+      </div>
+
+      <div
+        class="item"
+        (click)="showJobItemGallery('job-sistema-pamcard-4', 4)"
+      >
+        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-4.png" alt="" />
+      </div>
+
+      <div
+        class="item"
+        (click)="showJobItemGallery('job-sistema-pamcard-5', 5)"
+      >
+        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-5.png" alt="" />
+      </div>
+
+      <div
+        class="item"
+        (click)="showJobItemGallery('job-sistema-pamcard-6', 6)"
+      >
+        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-6.png" alt="" />
+      </div>
+
+      <div
+        class="item"
+        (click)="showJobItemGallery('job-sistema-pamcard-7', 7)"
+      >
+        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-7.png" alt="" />
+      </div>
+
+      <div
+        class="item"
+        (click)="showJobItemGallery('job-sistema-pamcard-8', 8)"
+      >
+        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-8.png" alt="" />
+      </div>
+
+      <div
+        class="item"
+        (click)="showJobItemGallery('job-sistema-pamcard-9', 9)"
+      >
+        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-9.png" alt="" />
+      </div>
+
+      <div
+        class="item"
+        (click)="showJobItemGallery('job-sistema-pamcard-10', 10)"
+      >
+        <img
+          src="../../../assets/jobs/sistemaPamcard/thumbnail-10.png"
+          alt=""
+        />
+      </div>
+
+      <div
+        class="item"
+        (click)="showJobItemGallery('job-sistema-pamcard-11', 11)"
+      >
+        <img
+          src="../../../assets/jobs/sistemaPamcard/thumbnail-11.png"
+          alt=""
+        />
+      </div>
+
+      <div
+        class="item"
+        (click)="showJobItemGallery('job-sistema-pamcard-12', 12)"
+      >
+        <img
+          src="../../../assets/jobs/sistemaPamcard/thumbnail-12.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <!-- end.list #job-sistema-pamcard-list -->
+
+    <div
+      class="arrow"
+      [class.disabled]="galleryListArrowRightDisabled"
+      (click)="
+        scrollHorizontalGalleryList($event, 'right', 'job-sistema-pamcard-list')
+      "
+    >
+      <i class="fas fa-chevron-right"></i>
+    </div>
+  </div>
+  <!-- end .bottom -->
+</div>
+<!-- end .gallery #job-sistema-pamcard -->

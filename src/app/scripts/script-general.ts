@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 // Variables
 import { Global } from './global';
 
+// Models
+import { ArrowsModel } from '../models/arrows-model';
+
 @Injectable()
 export class ScriptGeneral {
   constructor(public global: Global) {}
@@ -110,8 +113,6 @@ export class ScriptGeneral {
 
   activeSection = (sectionNumber: number) => {
     let diffZero: boolean;
-
-    console.log(new Date());
 
     document.querySelectorAll('section').forEach((element) => {
       element.classList.remove('active');
@@ -270,4 +271,46 @@ export class ScriptGeneral {
     localStorage.setItem('pbLang', lang);
   };
   // end setLang = (lang: string)
+
+  setScrollBy = async (
+    elementId: string,
+    direction: string,
+    scrollSize: number,
+    marginSize: number
+  ): Promise<any> => {
+    const element = document.querySelector(`#${elementId}`) as HTMLElement;
+    const ret: ArrowsModel = {};
+
+    if (direction === 'right') {
+      element.scrollBy(scrollSize, 0);
+
+      if (
+        element.offsetWidth + Math.trunc(element.scrollLeft) <=
+        element.scrollWidth - (scrollSize + marginSize)
+      ) {
+        ret.right = true;
+      } else {
+        ret.right = false;
+      }
+
+      ret.show = true;
+      ret.left = true;
+
+      return Promise.resolve(ret);
+    } else {
+      element.scrollBy(scrollSize * -1, 0);
+
+      if (element.scrollLeft < scrollSize + marginSize) {
+        ret.left = false;
+      } else {
+        ret.left = true;
+      }
+
+      ret.show = true;
+      ret.right = true;
+
+      return Promise.resolve(ret);
+    }
+  };
+  // end setScrollBy = (elementId: string, direction: string)
 }

@@ -60,6 +60,14 @@ export class TemplateMainComponent implements OnInit {
           this.totalSections
         );
       }
+
+      if (event.key === 'Escape') {
+        document.querySelectorAll(`#jobs .gallery`).forEach((element) => {
+          const aux = element as HTMLElement;
+
+          aux.classList.remove('show');
+        });
+      }
     });
     // end addEventListener -> keypress
 
