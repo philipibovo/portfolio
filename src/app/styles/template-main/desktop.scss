@@ -3,9 +3,9 @@ html {
 }
 
 body {
-  background: url('../../assets/bg/bg-section-1.png');
+  background: url('../../../assets/bg/bg-body.png');
   background-attachment: fixed;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 section {
@@ -907,16 +907,6 @@ section {
       }
     }
   }
-  // &.active {
-  //   .content {
-  //     > .main {
-  //       opacity: 1;
-  //       width: 100%;
-  //       transition: all 500ms;
-  //       transition-delay: 150ms;
-  //     }
-  //   }
-  // }
 }
 // end #projects
 

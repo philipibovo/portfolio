@@ -1,0 +1,76 @@
+body {
+  background: url('../../../assets/bg/bg-noise.jpg');
+  background-attachment: fixed;
+  animation: bgAnimate 500ms steps(10) infinite;
+  font-family: Arial, Helvetica, sans-serif;
+  filter: blur(1px);
+}
+
+@keyframes bgAnimate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+#not-found {
+  // #not-found .content
+  .content {
+    width: 100vw;
+    height: 100vh;
+    padding: 20px 0;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: bold;
+    color: #79ff20;
+    -webkit-text-fill-color: #79ff20; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    // #not-found .content > .top
+    > .top {
+      padding: 0 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      // #not-found .content > .top > div
+      > div {
+        // #not-found .content > .top > div:nth-child(3)
+        &:nth-child(3) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    // #not-found .content > .middle
+    > .middle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    // #not-found .content > .bottom
+    > .bottom {
+      width: 100%;
+      margin-bottom: 60px;
+      font-size: 1.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      // #not-found .content > .bottom > div
+      > div {
+        // #not-found .content > .bottom > div:nth-child(2)
+        &:nth-child(2) {
+          margin: 0 15px;
+          text-align: center;
+          padding-top: 8px;
+        }
+      }
+    }
+  }
+}

@@ -1,1 +1,43 @@
-<p>template-cv works!</p>
+<section
+  id="curriculum"
+  [class.landscape]="global.isLandscape"
+  [class.portrait]="global.isPortrait"
+  (window:resize)="scripts.resizedWindow()"
+>
+  <app-cv></app-cv>
+</section>
+
+<div
+  class="options no-print"
+  [class.landscape]="global.isLandscape"
+  [class.portrait]="global.isPortrait"
+>
+  <div class="print" onclick="window.print()">
+    <div *ngIf="global.lang === 'en'" class="hint--left" aria-label="Print">
+      <i class="fas fa-print"></i>
+    </div>
+
+    <div *ngIf="global.lang === 'pt'" class="hint--left" aria-label="Imprimir">
+      <i class="fas fa-print"></i>
+    </div>
+  </div>
+  <div class="lang">
+    <div
+      *ngIf="global.lang === 'en'"
+      class="hint--left"
+      aria-label="Versão em Protuguês"
+      (click)="scripts.setLang('pt')"
+    >
+      <img src="../assets/icons/brazil-flag.png" alt="Icon Brazil Flag" />
+    </div>
+
+    <div
+      *ngIf="global.lang === 'pt'"
+      class="hint--left"
+      aria-label="English Version"
+      (click)="scripts.setLang('en')"
+    >
+      <img src="../assets/icons/uk-flag.png" alt="Icon UK Flag" />
+    </div>
+  </div>
+</div>

@@ -74,7 +74,7 @@ export class JobsComponent implements OnInit {
     const listWidth = window.innerWidth - 120;
     const listItemWidth = 120;
     const listItemQtd = document.querySelectorAll(
-      '#jobs .gallery > .bottom > .list > .item'
+      `#jobs .gallery#${id} > .bottom > .list > .item`
     ).length;
 
     if (document.querySelector(`#${id}`)?.classList.contains('show')) {
@@ -85,9 +85,10 @@ export class JobsComponent implements OnInit {
       }, 500);
     } else {
       document
-        .querySelectorAll('#jobs .gallery > .main > .item')
+        .querySelectorAll(`#jobs .gallery#${id} > .main > .item`)
         .forEach((element, index) => {
           if (index === 0) {
+            console.log(element);
             if (!element.classList.contains('show')) {
               element.classList.add('show');
             }

@@ -6,8 +6,15 @@
 
   <div class="main">
     <div class="item" id="project-limoney">
-      <div class="image">
+      <div *ngIf="global.isDesktop" class="image">
         <img src="../../../assets/projects/limoney.png" alt="Logo Limoney" />
+      </div>
+
+      <div *ngIf="global.isMobile" class="image">
+        <img
+          src="../../../assets/projects/limoney-transparent.png"
+          alt="Logo Limoney"
+        />
       </div>
 
       <div class="wrap">
@@ -35,8 +42,15 @@
     <!-- end #project-limoney -->
 
     <div class="item" id="project-pompeijs">
-      <div class="image">
+      <div *ngIf="global.isDesktop" class="image">
         <img src="../../../assets/projects/pompeijs.png" alt="Logo PompeiJS" />
+      </div>
+
+      <div *ngIf="global.isMobile" class="image">
+        <img
+          src="../../../assets/projects/pompeijs-transparent.png"
+          alt="Logo PompeiJS"
+        />
       </div>
 
       <div class="wrap">
@@ -66,8 +80,15 @@
     <!-- end #project-pompeijs -->
 
     <div class="item" id="project-tivolijs">
-      <div class="image">
+      <div *ngIf="global.isDesktop" class="image">
         <img src="../../../assets/projects/tivolijs.png" alt="Logo TivoliJS" />
+      </div>
+
+      <div *ngIf="global.isMobile" class="image">
+        <img
+          src="../../../assets/projects/tivolijs-transparent.png"
+          alt="Logo TivoliJS"
+        />
       </div>
 
       <div class="wrap">
@@ -96,8 +117,15 @@
     <!-- end #project-tivolijs -->
 
     <div class="item" id="project-navonajs">
-      <div class="image">
+      <div *ngIf="global.isDesktop" class="image">
         <img src="../../../assets/projects/navonajs.png" alt="Logo NavonaJS" />
+      </div>
+
+      <div *ngIf="global.isMobile" class="image">
+        <img
+          src="../../../assets/projects/navonajs-transparent.png"
+          alt="Logo NavonaJS"
+        />
       </div>
 
       <div class="wrap">

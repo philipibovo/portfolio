@@ -1,0 +1,64 @@
+@page {
+  size: A4;
+  margin: 0.5cm;
+}
+
+@media print {
+  * {
+    color: #000 !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  body {
+    font-size: 16px;
+  }
+  // .no-print
+  .no-print {
+    display: none;
+  }
+  // #curriculum
+  #curriculum {
+    // #curriculum .content
+    .content {
+      // #curriculum .content .section-title
+      .section-title {
+        font-size: 1.2rem;
+        text-decoration: underline;
+        margin-bottom: 5px;
+      }
+      // #curriculum .content > .top
+      > .top {
+        > div {
+          float: left;
+          // #curriculum .content > .top > div.name
+          &.name {
+            width: 49%;
+            font-size: 3rem;
+            font-weight: 100;
+            text-align: center;
+            padding-top: 50px;
+          }
+          // #curriculum .content > .top > div.about
+          &.about {
+            width: 49%;
+            margin-left: 2%;
+            text-align: right;
+            // #curriculum .content > .top > div.about p
+            p {
+              margin: 10px 0;
+            }
+          }
+        }
+      }
+      // #curriculum .content > .section
+      > .section {
+        margin-top: 20px;
+        // #curriculum .content > .section ul
+        ul {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

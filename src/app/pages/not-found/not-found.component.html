@@ -1,0 +1,23 @@
+<div class="content">
+  <div class="top">
+    <div>404</div>
+    <div>Page Not Found</div>
+    <div>
+      <i class="fas fa-volume-mute"></i>
+    </div>
+  </div>
+
+  <div class="middle">
+    <div routerLink="/">
+      <img src="../../../assets/logo/logo-not-found.png" alt="" />
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div><i class="fas fa-volume-down"></i></div>
+    <div *ngIf="global.isDesktop">---------------------</div>
+    <div *ngIf="global.isMobile && global.isPortrait">---------</div>
+    <div *ngIf="global.isMobile && global.isLandscape">-------------</div>
+    <div><i class="fas fa-volume-up"></i></div>
+  </div>
+</div>

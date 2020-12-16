@@ -1,0 +1,131 @@
+body {
+  background: #f7f7f7;
+  color: #333333;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+  &:active {
+    text-decoration: none;
+    color: #333333;
+  }
+  &:visited {
+    text-decoration: none;
+    color: #333333;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.options {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f7f7f7;
+  font-size: 1.8rem;
+  z-index: 9;
+  // .options.portrait
+  &.portrait {
+    bottom: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    // .options.portrait > .print
+    > .print {
+      padding: 10px 10px 5px 10px;
+    }
+    // .options.portrait > .lang
+    > .lang {
+      margin-top: 5px;
+      padding: 10px 10px 5px 10px;
+      // .options.portrait > div img
+      img {
+        width: 35px;
+      }
+    }
+  }
+  // .options.landscape
+  &.landscape {
+    top: 0px;
+    right: 0px;
+    width: 65px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    // .options.landscape > .lang
+    > .lang {
+      // .options.landscape > div img
+      img {
+        width: 35px;
+      }
+    }
+  }
+  // .options > .lang
+  > .lang {
+    // .options > .lang img
+    img {
+      filter: grayscale(100%);
+    }
+  }
+}
+
+#curriculum {
+  // #curriculum .content
+  .content {
+    // #curriculum .content .section-title
+    .section-title {
+      font-size: 1.2rem;
+      text-decoration: underline;
+      margin-bottom: 5px;
+    }
+    // #curriculum .content > .top
+    > .top {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      // #curriculum .content > .top > .name
+      > .name {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 100;
+        white-space: nowrap;
+      }
+      // #curriculum .content > .top > .about
+      > .about {
+        // #curriculum .content > .top > .about p
+        p {
+          margin: 10px 0;
+        }
+      }
+    }
+    // #curriculum .content > .section
+    > .section {
+      margin-top: 20px;
+      // #curriculum .content > .section ul
+      ul {
+        margin-left: 20px;
+      }
+    }
+    // #curriculum .content > .bottom
+    > .bottom {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+  // #curriculum.portrait
+  &.portrait {
+    padding: 20px 20px 85px 20px;
+  }
+  // #curriculum.landscape
+  &.landscape {
+    padding: 20px 85px 20px 20px;
+  }
+}

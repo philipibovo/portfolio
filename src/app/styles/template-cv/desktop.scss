@@ -1,0 +1,113 @@
+body {
+  background: url('../../../assets/bg/bg-body.png');
+  background-attachment: fixed;
+  color: #333333;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+  &:active {
+    text-decoration: none;
+    color: #333333;
+  }
+  &:visited {
+    text-decoration: none;
+    color: #333333;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.options {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: #f7f7f7;
+  z-index: 9;
+  font-size: 1.5rem;
+  // .options > div
+  > div {
+    opacity: 0.5;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transform: scale(1);
+    text-align: center;
+    transition: all 150ms;
+    // .options > div:hover
+    &:hover {
+      opacity: 1;
+      transform: scale(1.5);
+      transition: all 150ms;
+    }
+    // .options > div img
+    img {
+      width: 30px;
+      filter: grayscale(100%);
+    }
+  }
+}
+
+#curriculum {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  // #curriculum .content
+  .content {
+    min-height: 100vh;
+    width: 70vw;
+    min-width: 830px;
+    background: #ffffff;
+    border-left: 5px double #333333;
+    border-right: 5px double #333333;
+    padding: 20px;
+    // #curriculum .content .section-title
+    .section-title {
+      font-size: 1.2rem;
+      text-decoration: underline;
+      margin-bottom: 5px;
+    }
+    // #curriculum .content > .top
+    > .top {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      // #curriculum .content > .top > .name
+      > .name {
+        width: 50%;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 100;
+        white-space: nowrap;
+      }
+      // #curriculum .content > .top > .about
+      > .about {
+        width: 50%;
+        padding-left: 20px;
+        text-align: right;
+        // #curriculum .content > .top > .about p
+        p {
+          margin: 10px 0;
+        }
+      }
+    }
+    // #curriculum .content > .section
+    > .section {
+      margin-top: 20px;
+      // #curriculum .content > .section ul
+      ul {
+        margin-left: 20px;
+      }
+    }
+    // #curriculum .content > .bottom
+    > .bottom {
+      width: 100%;
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+}

@@ -14,82 +14,61 @@
             <img src="../../../assets/jobs/sistemaPamcard/cover.png" alt="" />
           </div>
 
-          <div class="text">Sistema Pamcary</div>
+          <div class="text">Sistema Pamcard</div>
         </div>
       </div>
 
       <div class="item">
-        <div class="wrap">
-          <div class="image">img</div>
+        <div class="wrap" (click)="showHideJobGallery('job-pamcard-monitor')">
+          <div class="image">
+            <img src="../../../assets/jobs/pamcardMonitor/cover.png" alt="" />
+          </div>
 
-          <div class="text">Texto</div>
+          <div class="text">Pamcard - Monitor</div>
         </div>
       </div>
 
       <div class="item">
-        <div class="wrap">
-          <div class="image">img</div>
+        <div class="wrap" (click)="showHideJobGallery('job-fisiopole')">
+          <div class="image">
+            <img src="../../../assets/jobs/fisiopole/cover.png" alt="" />
+          </div>
 
-          <div class="text">Texto</div>
+          <div class="text">Fisiopole Studio</div>
         </div>
       </div>
 
       <div class="item">
-        <div class="wrap">
-          <div class="image">img</div>
+        <div class="wrap" (click)="showHideJobGallery('job-wedding')">
+          <div class="image">
+            <img src="../../../assets/jobs/wedding/cover.png" alt="" />
+          </div>
 
-          <div class="text">Texto</div>
+          <div class="text">Wedding</div>
         </div>
       </div>
 
-      <div class="item">
-        <div class="wrap">
-          <div class="image">img</div>
+      <div *ngIf="global.isDesktop" class="item">
+        <div class="wrap" (click)="showHideJobGallery('job-pmsv')">
+          <div class="image">
+            <img src="../../../assets/jobs/pmsv/cover.png" alt="" />
+          </div>
 
-          <div class="text">Texto</div>
+          <div class="text">Prefeitura São Vicente</div>
         </div>
       </div>
 
-      <div class="item">
-        <div class="wrap">
-          <div class="image">img</div>
+      <div *ngIf="global.isDesktop" class="item">
+        <div class="wrap" (click)="showHideJobGallery('job-interface-eng')">
+          <div class="image">
+            <img src="../../../assets/jobs/interfaceEng/cover.png" alt="" />
+          </div>
 
-          <div class="text">Texto</div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="wrap">
-          <div class="image">img</div>
-
-          <div class="text">Texto</div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="wrap">
-          <div class="image">img</div>
-
-          <div class="text">Texto</div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="wrap">
-          <div class="image">img</div>
-
-          <div class="text">Texto</div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="wrap">
-          <div class="image">img</div>
-
-          <div class="text">Texto</div>
+          <div class="text">Interface Engenharia</div>
         </div>
       </div>
     </div>
+    <!-- end .list #list-jobs -->
 
     <div *ngIf="arrows.show" class="arrows">
       <div class="arrow" id="jobs-arrow-left">
@@ -321,3 +300,573 @@
   <!-- end .bottom -->
 </div>
 <!-- end .gallery #job-sistema-pamcard -->
+
+<div class="gallery" id="job-pamcard-monitor">
+  <div class="top">
+    <div class="title">
+      <div class="text">Sistema Pamcard - Monitor</div>
+    </div>
+
+    <div class="close" (click)="showHideJobGallery('job-pamcard-monitor')">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+  <!-- end .top -->
+
+  <div class="main">
+    <div
+      class="arrow"
+      [class.disabled]="galleryArrowLeftDisabled"
+      (click)="
+        showPrevNextJobItemGallery($event, 'job-pamcard-monitor-', 'prev')
+      "
+    >
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    <div
+      class="arrow"
+      [class.disabled]="galleryArrowRightDisabled"
+      (click)="
+        showPrevNextJobItemGallery($event, 'job-pamcard-monitor-', 'next')
+      "
+    >
+      <i class="fas fa-chevron-right"></i>
+    </div>
+
+    <div class="item show" id="job-pamcard-monitor-1">
+      <img src="../../../assets/jobs/pamcardMonitor/1.png" alt="" />
+    </div>
+
+    <div class="item" id="job-pamcard-monitor-2">
+      <img src="../../../assets/jobs/pamcardMonitor/2.png" alt="" />
+    </div>
+
+    <div class="item" id="job-pamcard-monitor-3">
+      <img src="../../../assets/jobs/pamcardMonitor/3.png" alt="" />
+    </div>
+
+    <div class="item" id="job-pamcard-monitor-4">
+      <img src="../../../assets/jobs/pamcardMonitor/4.png" alt="" />
+    </div>
+
+    <div class="item" id="job-pamcard-monitor-5">
+      <img src="../../../assets/jobs/pamcardMonitor/5.png" alt="" />
+    </div>
+  </div>
+  <!-- end .main -->
+
+  <div class="bottom">
+    <div
+      class="arrow"
+      [class.disabled]="galleryListArrowLeftDisabled"
+      (click)="
+        scrollHorizontalGalleryList($event, 'left', 'job-pamcard-monitor-list')
+      "
+    >
+      <i class="fas fa-chevron-left"></i>
+    </div>
+
+    <div class="list" id="job-pamcard-monitor-list">
+      <div
+        class="item"
+        (click)="showJobItemGallery('job-pamcard-monitor-1', 1)"
+      >
+        <img src="../../../assets/jobs/pamcardMonitor/thumbnail-1.png" alt="" />
+      </div>
+
+      <div
+        class="item"
+        (click)="showJobItemGallery('job-pamcard-monitor-2', 2)"
+      >
+        <img src="../../../assets/jobs/pamcardMonitor/thumbnail-2.png" alt="" />
+      </div>
+
+      <div
+        class="item"
+        (click)="showJobItemGallery('job-pamcard-monitor-3', 3)"
+      >
+        <img src="../../../assets/jobs/pamcardMonitor/thumbnail-3.png" alt="" />
+      </div>
+
+      <div
+        class="item"
+        (click)="showJobItemGallery('job-pamcard-monitor-4', 4)"
+      >
+        <img src="../../../assets/jobs/pamcardMonitor/thumbnail-4.png" alt="" />
+      </div>
+
+      <div
+        class="item"
+        (click)="showJobItemGallery('job-pamcard-monitor-5', 5)"
+      >
+        <img src="../../../assets/jobs/pamcardMonitor/thumbnail-5.png" alt="" />
+      </div>
+    </div>
+    <!-- end.list #job-sistema-pamcard-list -->
+
+    <div
+      class="arrow"
+      [class.disabled]="galleryListArrowRightDisabled"
+      (click)="
+        scrollHorizontalGalleryList($event, 'right', 'job-pamcard-monitor-list')
+      "
+    >
+      <i class="fas fa-chevron-right"></i>
+    </div>
+  </div>
+  <!-- end .bottom -->
+</div>
+<!-- end .gallery #job-pamcard-monitor -->
+
+<div class="gallery" id="job-fisiopole">
+  <div class="top">
+    <div class="title">
+      <div class="text">Fisiopole Sudio</div>
+
+      <div class="link">
+        <a href="https://www.fisiopole.com.br/" target="_blank">
+          <div *ngIf="global.lang === 'en'">(Visit HTML Version)</div>
+          <div *ngIf="global.lang === 'pt'">(Veja a Versão HTML)</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="close" (click)="showHideJobGallery('job-fisiopole')">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+  <!-- end .top -->
+
+  <div class="main">
+    <div
+      class="arrow"
+      [class.disabled]="galleryArrowLeftDisabled"
+      (click)="showPrevNextJobItemGallery($event, 'job-fisiopole-', 'prev')"
+    >
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    <div
+      class="arrow"
+      [class.disabled]="galleryArrowRightDisabled"
+      (click)="showPrevNextJobItemGallery($event, 'job-fisiopole-', 'next')"
+    >
+      <i class="fas fa-chevron-right"></i>
+    </div>
+
+    <div class="item show" id="job-fisiopole-1">
+      <img src="../../../assets/jobs/fisiopole/1.png" alt="" />
+    </div>
+
+    <div class="item" id="job-fisiopole-2">
+      <img src="../../../assets/jobs/fisiopole/2.png" alt="" />
+    </div>
+
+    <div class="item" id="job-fisiopole-3">
+      <img src="../../../assets/jobs/fisiopole/3.png" alt="" />
+    </div>
+
+    <div class="item" id="job-fisiopole-4">
+      <img src="../../../assets/jobs/fisiopole/4.png" alt="" />
+    </div>
+
+    <div class="item" id="job-fisiopole-5">
+      <img src="../../../assets/jobs/fisiopole/5.png" alt="" />
+    </div>
+
+    <div class="item" id="job-fisiopole-6">
+      <img src="../../../assets/jobs/fisiopole/6.png" alt="" />
+    </div>
+
+    <div class="item" id="job-fisiopole-7">
+      <img src="../../../assets/jobs/fisiopole/7.png" alt="" />
+    </div>
+
+    <div class="item" id="job-fisiopole-8">
+      <img src="../../../assets/jobs/fisiopole/8.png" alt="" />
+    </div>
+  </div>
+  <!-- end .main -->
+
+  <div class="bottom">
+    <div
+      class="arrow"
+      [class.disabled]="galleryListArrowLeftDisabled"
+      (click)="
+        scrollHorizontalGalleryList($event, 'left', 'job-fisiopole-list')
+      "
+    >
+      <i class="fas fa-chevron-left"></i>
+    </div>
+
+    <div class="list" id="job-fisiopole-list">
+      <div class="item" (click)="showJobItemGallery('job-fisiopole-1', 1)">
+        <img src="../../../assets/jobs/fisiopole/thumbnail-1.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-fisiopole-2', 2)">
+        <img src="../../../assets/jobs/fisiopole/thumbnail-2.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-fisiopole-3', 3)">
+        <img src="../../../assets/jobs/fisiopole/thumbnail-3.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-fisiopole-4', 4)">
+        <img src="../../../assets/jobs/fisiopole/thumbnail-4.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-fisiopole-5', 5)">
+        <img src="../../../assets/jobs/fisiopole/thumbnail-5.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-fisiopole-6', 6)">
+        <img src="../../../assets/jobs/fisiopole/thumbnail-6.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-fisiopole-7', 7)">
+        <img src="../../../assets/jobs/fisiopole/thumbnail-7.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-fisiopole-8', 8)">
+        <img src="../../../assets/jobs/fisiopole/thumbnail-8.png" alt="" />
+      </div>
+    </div>
+    <!-- end.list #job-sistema-pamcard-list -->
+
+    <div
+      class="arrow"
+      [class.disabled]="galleryListArrowRightDisabled"
+      (click)="
+        scrollHorizontalGalleryList($event, 'right', 'job-fisiopole-list')
+      "
+    >
+      <i class="fas fa-chevron-right"></i>
+    </div>
+  </div>
+  <!-- end .bottom -->
+</div>
+<!-- end .gallery #job-fisiopole -->
+
+<div class="gallery" id="job-wedding">
+  <div class="top">
+    <div class="title">
+      <div class="text">Wedding</div>
+
+      <div class="link">
+        <a
+          href="https://philipi.bovo.me/jobs/wedding/index.html"
+          target="_blank"
+        >
+          <div *ngIf="global.lang === 'en'">(Visit HTML Version)</div>
+          <div *ngIf="global.lang === 'pt'">(Veja a Versão HTML)</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="close" (click)="showHideJobGallery('job-wedding')">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+  <!-- end .top -->
+
+  <div class="main">
+    <div
+      class="arrow"
+      [class.disabled]="galleryArrowLeftDisabled"
+      (click)="showPrevNextJobItemGallery($event, 'job-wedding-', 'prev')"
+    >
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    <div
+      class="arrow"
+      [class.disabled]="galleryArrowRightDisabled"
+      (click)="showPrevNextJobItemGallery($event, 'job-wedding-', 'next')"
+    >
+      <i class="fas fa-chevron-right"></i>
+    </div>
+
+    <div class="item show" id="job-wedding-1">
+      <img src="../../../assets/jobs/wedding/1.png" alt="" />
+    </div>
+
+    <div class="item" id="job-wedding-2">
+      <img src="../../../assets/jobs/wedding/2.png" alt="" />
+    </div>
+
+    <div class="item" id="job-wedding-3">
+      <img src="../../../assets/jobs/wedding/3.png" alt="" />
+    </div>
+
+    <div class="item" id="job-wedding-4">
+      <img src="../../../assets/jobs/wedding/4.png" alt="" />
+    </div>
+
+    <div class="item" id="job-wedding-5">
+      <img src="../../../assets/jobs/wedding/5.png" alt="" />
+    </div>
+
+    <div class="item" id="job-wedding-6">
+      <img src="../../../assets/jobs/wedding/6.png" alt="" />
+    </div>
+  </div>
+  <!-- end .main -->
+
+  <div class="bottom">
+    <div
+      class="arrow"
+      [class.disabled]="galleryListArrowLeftDisabled"
+      (click)="scrollHorizontalGalleryList($event, 'left', 'job-wedding-list')"
+    >
+      <i class="fas fa-chevron-left"></i>
+    </div>
+
+    <div class="list" id="job-wedding-list">
+      <div class="item" (click)="showJobItemGallery('job-wedding-1', 1)">
+        <img src="../../../assets/jobs/wedding/thumbnail-1.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-wedding-2', 2)">
+        <img src="../../../assets/jobs/wedding/thumbnail-2.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-wedding-3', 3)">
+        <img src="../../../assets/jobs/wedding/thumbnail-3.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-wedding-4', 4)">
+        <img src="../../../assets/jobs/wedding/thumbnail-4.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-wedding-5', 5)">
+        <img src="../../../assets/jobs/wedding/thumbnail-5.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-wedding-6', 6)">
+        <img src="../../../assets/jobs/wedding/thumbnail-6.png" alt="" />
+      </div>
+    </div>
+    <!-- end.list #job-sistema-pamcard-list -->
+
+    <div
+      class="arrow"
+      [class.disabled]="galleryListArrowRightDisabled"
+      (click)="scrollHorizontalGalleryList($event, 'right', 'job-wedding-list')"
+    >
+      <i class="fas fa-chevron-right"></i>
+    </div>
+  </div>
+  <!-- end .bottom -->
+</div>
+<!-- end .gallery #job-wedding -->
+
+<div class="gallery" id="job-pmsv">
+  <div class="top">
+    <div class="title">
+      <div class="text">Wedding</div>
+
+      <div class="link">
+        <a
+          href="https://philipi.bovo.me/jobs/pmsv/institucional/index.html"
+          target="_blank"
+        >
+          <div *ngIf="global.lang === 'en'">(Visit HTML Version)</div>
+          <div *ngIf="global.lang === 'pt'">(Veja a Versão HTML)</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="close" (click)="showHideJobGallery('job-pmsv')">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+  <!-- end .top -->
+
+  <div class="main">
+    <div
+      class="arrow"
+      [class.disabled]="galleryArrowLeftDisabled"
+      (click)="showPrevNextJobItemGallery($event, 'job-pmsv-', 'prev')"
+    >
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    <div
+      class="arrow"
+      [class.disabled]="galleryArrowRightDisabled"
+      (click)="showPrevNextJobItemGallery($event, 'job-pmsv-', 'next')"
+    >
+      <i class="fas fa-chevron-right"></i>
+    </div>
+
+    <div class="item show" id="job-pmsv-1">
+      <img src="../../../assets/jobs/pmsv/1.png" alt="" />
+    </div>
+
+    <div class="item" id="job-pmsv-2">
+      <img src="../../../assets/jobs/pmsv/2.png" alt="" />
+    </div>
+
+    <div class="item" id="job-pmsv-3">
+      <img src="../../../assets/jobs/pmsv/3.png" alt="" />
+    </div>
+
+    <div class="item" id="job-pmsv-4">
+      <img src="../../../assets/jobs/pmsv/4.png" alt="" />
+    </div>
+
+    <div class="item" id="job-pmsv-5">
+      <img src="../../../assets/jobs/pmsv/5.png" alt="" />
+    </div>
+
+    <div class="item" id="job-pmsv-6">
+      <img src="../../../assets/jobs/pmsv/6.png" alt="" />
+    </div>
+  </div>
+  <!-- end .main -->
+
+  <div class="bottom">
+    <div
+      class="arrow"
+      [class.disabled]="galleryListArrowLeftDisabled"
+      (click)="scrollHorizontalGalleryList($event, 'left', 'job-pmsv-list')"
+    >
+      <i class="fas fa-chevron-left"></i>
+    </div>
+
+    <div class="list" id="job-pmsv-list">
+      <div class="item" (click)="showJobItemGallery('job-pmsv-1', 1)">
+        <img src="../../../assets/jobs/pmsv/thumbnail-1.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-pmsv-2', 2)">
+        <img src="../../../assets/jobs/pmsv/thumbnail-2.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-pmsv-3', 3)">
+        <img src="../../../assets/jobs/pmsv/thumbnail-3.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-pmsv-4', 4)">
+        <img src="../../../assets/jobs/pmsv/thumbnail-4.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-pmsv-5', 5)">
+        <img src="../../../assets/jobs/pmsv/thumbnail-5.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-pmsv-6', 6)">
+        <img src="../../../assets/jobs/pmsv/thumbnail-6.png" alt="" />
+      </div>
+    </div>
+    <!-- end.list #job-sistema-pamcard-list -->
+
+    <div
+      class="arrow"
+      [class.disabled]="galleryListArrowRightDisabled"
+      (click)="scrollHorizontalGalleryList($event, 'right', 'job-pmsv-list')"
+    >
+      <i class="fas fa-chevron-right"></i>
+    </div>
+  </div>
+  <!-- end .bottom -->
+</div>
+<!-- end .gallery #job-pmsv -->
+
+<div class="gallery" id="job-interface-eng">
+  <div class="top">
+    <div class="title">
+      <div class="text">Interface Engenharia</div>
+
+      <div class="link">
+        <a
+          href="https://philipi.bovo.me/jobs/interfaceEng/consultaUsuario.html"
+          target="_blank"
+        >
+          <div *ngIf="global.lang === 'en'">(Visit HTML Version)</div>
+          <div *ngIf="global.lang === 'pt'">(Veja a Versão HTML)</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="close" (click)="showHideJobGallery('job-interface-eng')">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+  <!-- end .top -->
+
+  <div class="main">
+    <div
+      class="arrow"
+      [class.disabled]="galleryArrowLeftDisabled"
+      (click)="showPrevNextJobItemGallery($event, 'job-interface-eng-', 'prev')"
+    >
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    <div
+      class="arrow"
+      [class.disabled]="galleryArrowRightDisabled"
+      (click)="showPrevNextJobItemGallery($event, 'job-interface-eng-', 'next')"
+    >
+      <i class="fas fa-chevron-right"></i>
+    </div>
+
+    <div class="item show" id="job-interface-eng-1">
+      <img src="../../../assets/jobs/interfaceEng/1.png" alt="" />
+    </div>
+
+    <div class="item" id="job-interface-eng-2">
+      <img src="../../../assets/jobs/interfaceEng/2.png" alt="" />
+    </div>
+
+    <div class="item" id="job-interface-eng-3">
+      <img src="../../../assets/jobs/interfaceEng/3.png" alt="" />
+    </div>
+
+    <div class="item" id="job-interface-eng-4">
+      <img src="../../../assets/jobs/interfaceEng/4.png" alt="" />
+    </div>
+  </div>
+  <!-- end .main -->
+
+  <div class="bottom">
+    <div
+      class="arrow"
+      [class.disabled]="galleryListArrowLeftDisabled"
+      (click)="
+        scrollHorizontalGalleryList($event, 'left', 'job-interface-eng-list')
+      "
+    >
+      <i class="fas fa-chevron-left"></i>
+    </div>
+
+    <div class="list" id="job-interface-eng-list">
+      <div class="item" (click)="showJobItemGallery('job-interface-eng-1', 1)">
+        <img src="../../../assets/jobs/interfaceEng/thumbnail-1.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-interface-eng-2', 2)">
+        <img src="../../../assets/jobs/interfaceEng/thumbnail-2.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-interface-eng-3', 3)">
+        <img src="../../../assets/jobs/interfaceEng/thumbnail-3.png" alt="" />
+      </div>
+
+      <div class="item" (click)="showJobItemGallery('job-interface-eng-4', 4)">
+        <img src="../../../assets/jobs/interfaceEng/thumbnail-4.png" alt="" />
+      </div>
+    </div>
+    <!-- end.list #job-sistema-pamcard-list -->
+
+    <div
+      class="arrow"
+      [class.disabled]="galleryListArrowRightDisabled"
+      (click)="
+        scrollHorizontalGalleryList($event, 'right', 'job-interface-eng-list')
+      "
+    >
+      <i class="fas fa-chevron-right"></i>
+    </div>
+  </div>
+  <!-- end .bottom -->
+</div>
+<!-- end .gallery #job-interface-eng -->

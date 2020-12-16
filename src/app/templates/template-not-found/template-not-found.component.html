@@ -1,0 +1,8 @@
+<section
+  id="not-found"
+  [class.landscape]="global.isLandscape"
+  [class.portrait]="global.isPortrait"
+  (window:resize)="scripts.resizedWindow()"
+>
+  <app-not-found></app-not-found>
+</section>

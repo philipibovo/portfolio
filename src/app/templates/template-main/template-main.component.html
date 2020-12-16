@@ -28,6 +28,7 @@
     <div class="social">
       <!-- #icon-linkedin -->
       <div
+        *ngIf="global.isDesktop"
         id="icon-linkedin"
         class="social-icon hint--bottom"
         [class]="global.socialIconTheme"
@@ -37,10 +38,22 @@
           <i class="fab fa-linkedin-in"></i>
         </a>
       </div>
+
+      <div
+        *ngIf="global.isMobile"
+        id="icon-linkedin"
+        class="social-icon"
+        [class]="global.socialIconTheme"
+      >
+        <a href="https://www.linkedin.com/in/philipi-bovo/" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
       <!-- end #icon-linkedin -->
 
       <!-- #icon-github -->
       <div
+        *ngIf="global.isDesktop"
         id="icon-github"
         class="social-icon hint--bottom"
         [class]="global.socialIconTheme"
@@ -50,10 +63,22 @@
           <i class="fab fa-github"></i>
         </a>
       </div>
+
+      <div
+        *ngIf="global.isMobile"
+        id="icon-github"
+        class="social-icon"
+        [class]="global.socialIconTheme"
+      >
+        <a href="https://github.com/philipibovo" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
       <!-- end #icon-github -->
 
       <!-- #icon-cv -->
       <div
+        *ngIf="global.isDesktop"
         id="icon-cv"
         class="social-icon hint--bottom"
         [class]="global.socialIconTheme"
@@ -62,11 +87,21 @@
       >
         <i class="far fa-address-card"></i>
       </div>
+
+      <div
+        *ngIf="global.isMobile"
+        id="icon-cv"
+        class="social-icon"
+        [class]="global.socialIconTheme"
+        (click)="scripts.openCvNewTab()"
+      >
+        <i class="far fa-address-card"></i>
+      </div>
       <!-- end #icon-cv -->
 
       <!-- #icon-lang -->
       <div
-        *ngIf="global.lang === 'en'"
+        *ngIf="global.isDesktop && global.lang === 'en'"
         id="icon-lang"
         class="social-icon hint--left"
         [class]="global.socialIconTheme"
@@ -75,15 +110,33 @@
       >
         <img src="../assets/icons/brazil-flag.png" alt="Icon Brazil Flag" />
       </div>
-      <!-- end #icon-lang -->
 
-      <!-- #icon-lang -->
       <div
-        *ngIf="global.lang === 'pt'"
+        *ngIf="global.isMobile && global.lang === 'en'"
+        id="icon-lang"
+        class="social-icon"
+        [class]="global.socialIconTheme"
+        (click)="scripts.setLang('pt')"
+      >
+        <img src="../assets/icons/brazil-flag.png" alt="Icon Brazil Flag" />
+      </div>
+
+      <div
+        *ngIf="global.isDesktop && global.lang === 'pt'"
         id="icon-lang"
         class="social-icon hint--left"
         [class]="global.socialIconTheme"
         aria-label="English Version"
+        (click)="scripts.setLang('en')"
+      >
+        <img src="../assets/icons/uk-flag.png" alt="Icon UK Flag" />
+      </div>
+
+      <div
+        *ngIf="global.isMobile && global.lang === 'pt'"
+        id="icon-lang"
+        class="social-icon"
+        [class]="global.socialIconTheme"
         (click)="scripts.setLang('en')"
       >
         <img src="../assets/icons/uk-flag.png" alt="Icon UK Flag" />

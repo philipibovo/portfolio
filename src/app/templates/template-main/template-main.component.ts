@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 // Scripts
 import { Global } from '../../scripts/global';
@@ -8,6 +8,7 @@ import { ScriptGeneral } from '../../scripts/script-general';
   selector: 'app-template-main',
   templateUrl: './template-main.component.html',
   styleUrls: ['./template-main.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class TemplateMainComponent implements OnInit {
   private _latsPosScroll: number = 0;
