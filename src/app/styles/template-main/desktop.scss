@@ -342,10 +342,11 @@ section {
           color: #f7f7f7;
           // #about .content > .social > .social-icon.light > a
           > a {
+            &:link,
             &:active,
             &:visited,
             &:hover {
-              color: #f7f7f7;
+              color: #f7f7f7 !important;
               text-decoration: none;
             }
           }
@@ -355,6 +356,7 @@ section {
           color: #333333;
           // #about .content > .social > .social-icon.dark > a
           > a {
+            &:link,
             &:active,
             &:visited,
             &:hover {
