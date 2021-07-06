@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "bovo-me"
+  },
+  "targets": {
+    "bovo-me": {
+      "hosting": {
+        "philipi": [
+          "philipi-bovo-me"
+        ]
+      }
+    }
+  }
+}
