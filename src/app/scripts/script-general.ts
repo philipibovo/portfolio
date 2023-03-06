@@ -269,6 +269,20 @@ export class ScriptGeneral {
   setLang = (lang: string) => {
     this.global.lang = lang;
     localStorage.setItem('pbLang', lang);
+
+    let localLang: string = `pt-br`;
+
+    switch (lang) {
+      case `en`:
+        localLang = `en`;
+        break;
+
+      case `pt`:
+        localLang = `pt-br`;
+        break;
+    }
+
+    document.documentElement.setAttribute('lang', localLang);
   };
   // end setLang = (lang: string)
 

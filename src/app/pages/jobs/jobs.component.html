@@ -11,7 +11,10 @@
       <div class="item">
         <div class="wrap" (click)="showHideJobGallery('job-limoney')">
           <div class="image">
-            <img src="../../../assets/jobs/limoney/cover.png" alt="" />
+            <img
+              src="../../../assets/jobs/limoney/cover.png"
+              alt="Job Limoney"
+            />
           </div>
 
           <div class="text">Limoney</div>
@@ -21,7 +24,10 @@
       <div class="item">
         <div class="wrap" (click)="showHideJobGallery('job-sistema-pamcard')">
           <div class="image">
-            <img src="../../../assets/jobs/sistemaPamcard/cover.png" alt="" />
+            <img
+              src="../../../assets/jobs/sistemaPamcard/cover.png"
+              alt="Job Pamcard"
+            />
           </div>
 
           <div class="text">Sistema Pamcard</div>
@@ -35,7 +41,10 @@
           (click)="showHideJobGallery('job-pamcard-monitor')"
         >
           <div class="image">
-            <img src="../../../assets/jobs/pamcardMonitor/cover.png" alt="" />
+            <img
+              src="../../../assets/jobs/pamcardMonitor/cover.png"
+              alt="Job Pamcard Monitor"
+            />
           </div>
 
           <div class="text">Pamcard - Monitor</div>
@@ -45,7 +54,10 @@
       <div class="item">
         <div class="wrap" (click)="showHideJobGallery('job-fisiopole')">
           <div class="image">
-            <img src="../../../assets/jobs/fisiopole/cover.png" alt="" />
+            <img
+              src="../../../assets/jobs/fisiopole/cover.png"
+              alt="Job Fisio Pole Art"
+            />
           </div>
 
           <div class="text">Fisiopole Studio</div>
@@ -55,7 +67,10 @@
       <div class="item">
         <div class="wrap" (click)="showHideJobGallery('job-wedding')">
           <div class="image">
-            <img src="../../../assets/jobs/wedding/cover.png" alt="" />
+            <img
+              src="../../../assets/jobs/wedding/cover.png"
+              alt="Job Wedding"
+            />
           </div>
 
           <div class="text">Wedding</div>
@@ -69,7 +84,10 @@
           (click)="showHideJobGallery('job-pmsv')"
         >
           <div class="image">
-            <img src="../../../assets/jobs/pmsv/cover.png" alt="" />
+            <img
+              src="../../../assets/jobs/pmsv/cover.png"
+              alt="Job Prefeitura São Vicente"
+            />
           </div>
 
           <div class="text">Prefeitura São Vicente</div>
@@ -83,7 +101,10 @@
           (click)="showHideJobGallery('job-interface-eng')"
         >
           <div class="image">
-            <img src="../../../assets/jobs/interfaceEng/cover.png" alt="" />
+            <img
+              src="../../../assets/jobs/interfaceEng/cover.png"
+              alt="Job Interface Engenharia"
+            />
           </div>
 
           <div class="text">Interface Engenharia</div>
@@ -119,9 +140,21 @@
       <div class="text">Limoney</div>
 
       <div class="link">
-        <a href="https://limoney.app" target="_blank">
-          <div *ngIf="global.lang === 'en'">(Visit HTML Version)</div>
-          <div *ngIf="global.lang === 'pt'">(Veja a Versão HTML)</div>
+        <a
+          href="https://limoney.app"
+          target="_blank"
+          [attr.aria-label]="
+            global.lang === 'en'
+              ? 'Visit Limoney HTML Version'
+              : 'Veja a Versão HTML do Limoney'
+          "
+        >
+          <div *ngIf="global.lang === 'en'" lang="en" aria-hidden="true">
+            (Visit HTML Version)
+          </div>
+          <div *ngIf="global.lang === 'pt'" lang="pt-br" aria-hidden="true">
+            (Veja a Versão HTML)
+          </div>
         </a>
       </div>
     </div>
@@ -149,59 +182,74 @@
     </div>
 
     <div class="item show" id="job-limoney-1">
-      <img src="../../../assets/jobs/limoney/1.png" alt="" />
+      <img src="../../../assets/jobs/limoney/1.png" alt="Job Limoney Print 1" />
     </div>
 
     <div class="item" id="job-limoney-2">
-      <img src="../../../assets/jobs/limoney/2.png" alt="" />
+      <img src="../../../assets/jobs/limoney/2.png" alt="Job Limoney Print 2" />
     </div>
 
     <div class="item" id="job-limoney-3">
-      <img src="../../../assets/jobs/limoney/3.png" alt="" />
+      <img src="../../../assets/jobs/limoney/3.png" alt="Job Limoney Print 3" />
     </div>
 
     <div class="item" id="job-limoney-4">
-      <img src="../../../assets/jobs/limoney/4.png" alt="" />
+      <img src="../../../assets/jobs/limoney/4.png" alt="Job Limoney Print 4" />
     </div>
 
     <div class="item" id="job-limoney-5">
-      <img src="../../../assets/jobs/limoney/5.png" alt="" />
+      <img src="../../../assets/jobs/limoney/5.png" alt="Job Limoney Print 5" />
     </div>
 
     <div class="item" id="job-limoney-6">
-      <img src="../../../assets/jobs/limoney/6.png" alt="" />
+      <img src="../../../assets/jobs/limoney/6.png" alt="Job Limoney Print 6" />
     </div>
 
     <div class="item" id="job-limoney-7">
-      <img src="../../../assets/jobs/limoney/7.png" alt="" />
+      <img src="../../../assets/jobs/limoney/7.png" alt="Job Limoney Print 7" />
     </div>
 
     <div class="item" id="job-limoney-8">
-      <img src="../../../assets/jobs/limoney/8.png" alt="" />
+      <img src="../../../assets/jobs/limoney/8.png" alt="Job Limoney Print 8" />
     </div>
 
     <div class="item" id="job-limoney-9">
-      <img src="../../../assets/jobs/limoney/9.png" alt="" />
+      <img src="../../../assets/jobs/limoney/9.png" alt="Job Limoney Print 9" />
     </div>
 
     <div class="item" id="job-limoney-10">
-      <img src="../../../assets/jobs/limoney/10.png" alt="" />
+      <img
+        src="../../../assets/jobs/limoney/10.png"
+        alt="Job Limoney Print 10"
+      />
     </div>
 
     <div class="item" id="job-limoney-11">
-      <img src="../../../assets/jobs/limoney/11.png" alt="" />
+      <img
+        src="../../../assets/jobs/limoney/11.png"
+        alt="Job Limoney Print 11"
+      />
     </div>
 
     <div class="item" id="job-limoney-12">
-      <img src="../../../assets/jobs/limoney/12.png" alt="" />
+      <img
+        src="../../../assets/jobs/limoney/12.png"
+        alt="Job Limoney Print 12"
+      />
     </div>
 
     <div class="item" id="job-limoney-13">
-      <img src="../../../assets/jobs/limoney/13.png" alt="" />
+      <img
+        src="../../../assets/jobs/limoney/13.png"
+        alt="Job Limoney Print 13"
+      />
     </div>
 
     <div class="item" id="job-limoney-14">
-      <img src="../../../assets/jobs/limoney/14.png" alt="" />
+      <img
+        src="../../../assets/jobs/limoney/14.png"
+        alt="Job Limoney Print 14"
+      />
     </div>
   </div>
   <!-- end .main -->
@@ -217,59 +265,101 @@
 
     <div class="list" id="job-limoney-list">
       <div class="item" (click)="showJobItemGallery('job-limoney-1', 1)">
-        <img src="../../../assets/jobs/limoney/thumbnail-1.png" alt="" />
+        <img
+          src="../../../assets/jobs/limoney/thumbnail-1.png"
+          alt="Job Limoney Thumbnail 1"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-limoney-2', 2)">
-        <img src="../../../assets/jobs/limoney/thumbnail-2.png" alt="" />
+        <img
+          src="../../../assets/jobs/limoney/thumbnail-2.png"
+          alt="Job Limoney Thumbnail 2"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-limoney-3', 3)">
-        <img src="../../../assets/jobs/limoney/thumbnail-3.png" alt="" />
+        <img
+          src="../../../assets/jobs/limoney/thumbnail-3.png"
+          alt="Job Limoney Thumbnail 3"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-limoney-4', 4)">
-        <img src="../../../assets/jobs/limoney/thumbnail-4.png" alt="" />
+        <img
+          src="../../../assets/jobs/limoney/thumbnail-4.png"
+          alt="Job Limoney Thumbnail 4"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-limoney-5', 5)">
-        <img src="../../../assets/jobs/limoney/thumbnail-5.png" alt="" />
+        <img
+          src="../../../assets/jobs/limoney/thumbnail-5.png"
+          alt="Job Limoney Thumbnail 5"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-limoney-6', 6)">
-        <img src="../../../assets/jobs/limoney/thumbnail-6.png" alt="" />
+        <img
+          src="../../../assets/jobs/limoney/thumbnail-6.png"
+          alt="Job Limoney Thumbnail 6"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-limoney-7', 7)">
-        <img src="../../../assets/jobs/limoney/thumbnail-7.png" alt="" />
+        <img
+          src="../../../assets/jobs/limoney/thumbnail-7.png"
+          alt="Job Limoney Thumbnail 7"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-limoney-8', 8)">
-        <img src="../../../assets/jobs/limoney/thumbnail-8.png" alt="" />
+        <img
+          src="../../../assets/jobs/limoney/thumbnail-8.png"
+          alt="Job Limoney Thumbnail 8"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-limoney-9', 9)">
-        <img src="../../../assets/jobs/limoney/thumbnail-9.png" alt="" />
+        <img
+          src="../../../assets/jobs/limoney/thumbnail-9.png"
+          alt="Job Limoney Thumbnail 9"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-limoney-10', 10)">
-        <img src="../../../assets/jobs/limoney/thumbnail-10.png" alt="" />
+        <img
+          src="../../../assets/jobs/limoney/thumbnail-10.png"
+          alt="Job Limoney Thumbnail 10"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-limoney-11', 11)">
-        <img src="../../../assets/jobs/limoney/thumbnail-11.png" alt="" />
+        <img
+          src="../../../assets/jobs/limoney/thumbnail-11.png"
+          alt="Job Limoney Thumbnail 11"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-limoney-12', 12)">
-        <img src="../../../assets/jobs/limoney/thumbnail-12.png" alt="" />
+        <img
+          src="../../../assets/jobs/limoney/thumbnail-12.png"
+          alt="Job Limoney Thumbnail 12"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-limoney-13', 13)">
-        <img src="../../../assets/jobs/limoney/thumbnail-13.png" alt="" />
+        <img
+          src="../../../assets/jobs/limoney/thumbnail-13.png"
+          alt="Job Limoney Thumbnail 13"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-limoney-14', 14)">
-        <img src="../../../assets/jobs/limoney/thumbnail-14.png" alt="" />
+        <img
+          src="../../../assets/jobs/limoney/thumbnail-14.png"
+          alt="Job Limoney Thumbnail 14"
+        />
       </div>
     </div>
     <!-- end.list #job-sistema-pamcard-list -->
@@ -292,9 +382,21 @@
       <div class="text">Sistema Pamcard</div>
 
       <div class="link">
-        <a href="https://www.roadcard.com.br/sistemapamcard/" target="_blank">
-          <div *ngIf="global.lang === 'en'">(Visit HTML Version)</div>
-          <div *ngIf="global.lang === 'pt'">(Veja a Versão HTML)</div>
+        <a
+          href="https://www.roadcard.com.br/sistemapamcard/"
+          target="_blank"
+          [attr.aria-label]="
+            global.lang === 'en'
+              ? '(Visit Pamcard HTML Version'
+              : 'Veja a Versão HTML do Pamcard'
+          "
+        >
+          <div *ngIf="global.lang === 'en'" lang="en" aria-hidden="true">
+            (Visit HTML Version)
+          </div>
+          <div *ngIf="global.lang === 'pt'" lang="pt-br" aria-hidden="true">
+            (Veja a Versão HTML)
+          </div>
         </a>
       </div>
     </div>
@@ -326,51 +428,87 @@
     </div>
 
     <div class="item show" id="job-sistema-pamcard-1">
-      <img src="../../../assets/jobs/sistemaPamcard/1.png" alt="" />
+      <img
+        src="../../../assets/jobs/sistemaPamcard/1.png"
+        alt="Job Pamcard Print 1"
+      />
     </div>
 
     <div class="item" id="job-sistema-pamcard-2">
-      <img src="../../../assets/jobs/sistemaPamcard/2.png" alt="" />
+      <img
+        src="../../../assets/jobs/sistemaPamcard/2.png"
+        alt="Job Pamcard Print 2"
+      />
     </div>
 
     <div class="item" id="job-sistema-pamcard-3">
-      <img src="../../../assets/jobs/sistemaPamcard/3.png" alt="" />
+      <img
+        src="../../../assets/jobs/sistemaPamcard/3.png"
+        alt="Job Pamcard Print 3"
+      />
     </div>
 
     <div class="item" id="job-sistema-pamcard-4">
-      <img src="../../../assets/jobs/sistemaPamcard/4.png" alt="" />
+      <img
+        src="../../../assets/jobs/sistemaPamcard/4.png"
+        alt="Job Pamcard Print 4"
+      />
     </div>
 
     <div class="item" id="job-sistema-pamcard-5">
-      <img src="../../../assets/jobs/sistemaPamcard/5.png" alt="" />
+      <img
+        src="../../../assets/jobs/sistemaPamcard/5.png"
+        alt="Job Pamcard Print 5"
+      />
     </div>
 
     <div class="item" id="job-sistema-pamcard-6">
-      <img src="../../../assets/jobs/sistemaPamcard/6.png" alt="" />
+      <img
+        src="../../../assets/jobs/sistemaPamcard/6.png"
+        alt="Job Pamcard Print 6"
+      />
     </div>
 
     <div class="item" id="job-sistema-pamcard-7">
-      <img src="../../../assets/jobs/sistemaPamcard/7.png" alt="" />
+      <img
+        src="../../../assets/jobs/sistemaPamcard/7.png"
+        alt="Job Pamcard Print 7"
+      />
     </div>
 
     <div class="item" id="job-sistema-pamcard-8">
-      <img src="../../../assets/jobs/sistemaPamcard/8.png" alt="" />
+      <img
+        src="../../../assets/jobs/sistemaPamcard/8.png"
+        alt="Job Pamcard Print 8"
+      />
     </div>
 
     <div class="item" id="job-sistema-pamcard-9">
-      <img src="../../../assets/jobs/sistemaPamcard/9.png" alt="" />
+      <img
+        src="../../../assets/jobs/sistemaPamcard/9.png"
+        alt="Job Pamcard Print 9"
+      />
     </div>
 
     <div class="item" id="job-sistema-pamcard-10">
-      <img src="../../../assets/jobs/sistemaPamcard/10.png" alt="" />
+      <img
+        src="../../../assets/jobs/sistemaPamcard/10.png"
+        alt="Job Pamcard Print 10"
+      />
     </div>
 
     <div class="item" id="job-sistema-pamcard-11">
-      <img src="../../../assets/jobs/sistemaPamcard/11.png" alt="" />
+      <img
+        src="../../../assets/jobs/sistemaPamcard/11.png"
+        alt="Job Pamcard Print 11"
+      />
     </div>
 
     <div class="item" id="job-sistema-pamcard-12">
-      <img src="../../../assets/jobs/sistemaPamcard/12.png" alt="" />
+      <img
+        src="../../../assets/jobs/sistemaPamcard/12.png"
+        alt="Job Pamcard Print 12"
+      />
     </div>
   </div>
   <!-- end .main -->
@@ -391,63 +529,90 @@
         class="item"
         (click)="showJobItemGallery('job-sistema-pamcard-1', 1)"
       >
-        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-1.png" alt="" />
+        <img
+          src="../../../assets/jobs/sistemaPamcard/thumbnail-1.png"
+          alt="Job Pamcard Thumbnail 1"
+        />
       </div>
 
       <div
         class="item"
         (click)="showJobItemGallery('job-sistema-pamcard-2', 2)"
       >
-        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-2.png" alt="" />
+        <img
+          src="../../../assets/jobs/sistemaPamcard/thumbnail-2.png"
+          alt="Job Pamcard Thumbnail 2"
+        />
       </div>
 
       <div
         class="item"
         (click)="showJobItemGallery('job-sistema-pamcard-3', 3)"
       >
-        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-3.png" alt="" />
+        <img
+          src="../../../assets/jobs/sistemaPamcard/thumbnail-3.png"
+          alt="Job Pamcard Thumbnail 3"
+        />
       </div>
 
       <div
         class="item"
         (click)="showJobItemGallery('job-sistema-pamcard-4', 4)"
       >
-        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-4.png" alt="" />
+        <img
+          src="../../../assets/jobs/sistemaPamcard/thumbnail-4.png"
+          alt="Job Pamcard Thumbnail 4"
+        />
       </div>
 
       <div
         class="item"
         (click)="showJobItemGallery('job-sistema-pamcard-5', 5)"
       >
-        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-5.png" alt="" />
+        <img
+          src="../../../assets/jobs/sistemaPamcard/thumbnail-5.png"
+          alt="Job Pamcard Thumbnail 5"
+        />
       </div>
 
       <div
         class="item"
         (click)="showJobItemGallery('job-sistema-pamcard-6', 6)"
       >
-        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-6.png" alt="" />
+        <img
+          src="../../../assets/jobs/sistemaPamcard/thumbnail-6.png"
+          alt="Job Pamcard Thumbnail 6"
+        />
       </div>
 
       <div
         class="item"
         (click)="showJobItemGallery('job-sistema-pamcard-7', 7)"
       >
-        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-7.png" alt="" />
+        <img
+          src="../../../assets/jobs/sistemaPamcard/thumbnail-7.png"
+          alt="Job Pamcard Thumbnail 7"
+        />
       </div>
 
       <div
         class="item"
         (click)="showJobItemGallery('job-sistema-pamcard-8', 8)"
       >
-        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-8.png" alt="" />
+        <img
+          src="../../../assets/jobs/sistemaPamcard/thumbnail-8.png"
+          alt="Job Pamcard Thumbnail 8"
+        />
       </div>
 
       <div
         class="item"
         (click)="showJobItemGallery('job-sistema-pamcard-9', 9)"
       >
-        <img src="../../../assets/jobs/sistemaPamcard/thumbnail-9.png" alt="" />
+        <img
+          src="../../../assets/jobs/sistemaPamcard/thumbnail-9.png"
+          alt="Job Pamcard Thumbnail 9"
+        />
       </div>
 
       <div
@@ -456,7 +621,7 @@
       >
         <img
           src="../../../assets/jobs/sistemaPamcard/thumbnail-10.png"
-          alt=""
+          alt="Job Pamcard Thumbnail 10"
         />
       </div>
 
@@ -466,7 +631,7 @@
       >
         <img
           src="../../../assets/jobs/sistemaPamcard/thumbnail-11.png"
-          alt=""
+          alt="Job Pamcard Thumbnail 11"
         />
       </div>
 
@@ -476,7 +641,7 @@
       >
         <img
           src="../../../assets/jobs/sistemaPamcard/thumbnail-12.png"
-          alt=""
+          alt="Job Pamcard Thumbnail 12"
         />
       </div>
     </div>
@@ -529,23 +694,38 @@
     </div>
 
     <div class="item show" id="job-pamcard-monitor-1">
-      <img src="../../../assets/jobs/pamcardMonitor/1.png" alt="" />
+      <img
+        src="../../../assets/jobs/pamcardMonitor/1.png"
+        alt="Job Pamcard Monitor Print 1"
+      />
     </div>
 
     <div class="item" id="job-pamcard-monitor-2">
-      <img src="../../../assets/jobs/pamcardMonitor/2.png" alt="" />
+      <img
+        src="../../../assets/jobs/pamcardMonitor/2.png"
+        alt="Job Pamcard Monitor Print 2"
+      />
     </div>
 
     <div class="item" id="job-pamcard-monitor-3">
-      <img src="../../../assets/jobs/pamcardMonitor/3.png" alt="" />
+      <img
+        src="../../../assets/jobs/pamcardMonitor/3.png"
+        alt="Job Pamcard Monitor Print 3"
+      />
     </div>
 
     <div class="item" id="job-pamcard-monitor-4">
-      <img src="../../../assets/jobs/pamcardMonitor/4.png" alt="" />
+      <img
+        src="../../../assets/jobs/pamcardMonitor/4.png"
+        alt="Job Pamcard Monitor Print 4"
+      />
     </div>
 
     <div class="item" id="job-pamcard-monitor-5">
-      <img src="../../../assets/jobs/pamcardMonitor/5.png" alt="" />
+      <img
+        src="../../../assets/jobs/pamcardMonitor/5.png"
+        alt="Job Pamcard Monitor Print 5"
+      />
     </div>
   </div>
   <!-- end .main -->
@@ -566,35 +746,50 @@
         class="item"
         (click)="showJobItemGallery('job-pamcard-monitor-1', 1)"
       >
-        <img src="../../../assets/jobs/pamcardMonitor/thumbnail-1.png" alt="" />
+        <img
+          src="../../../assets/jobs/pamcardMonitor/thumbnail-1.png"
+          alt="Job Pamcard Monitor Thumbnail 1"
+        />
       </div>
 
       <div
         class="item"
         (click)="showJobItemGallery('job-pamcard-monitor-2', 2)"
       >
-        <img src="../../../assets/jobs/pamcardMonitor/thumbnail-2.png" alt="" />
+        <img
+          src="../../../assets/jobs/pamcardMonitor/thumbnail-2.png"
+          alt="Job Pamcard Monitor Thumbnail 2"
+        />
       </div>
 
       <div
         class="item"
         (click)="showJobItemGallery('job-pamcard-monitor-3', 3)"
       >
-        <img src="../../../assets/jobs/pamcardMonitor/thumbnail-3.png" alt="" />
+        <img
+          src="../../../assets/jobs/pamcardMonitor/thumbnail-3.png"
+          alt="Job Pamcard Monitor Thumbnail 3"
+        />
       </div>
 
       <div
         class="item"
         (click)="showJobItemGallery('job-pamcard-monitor-4', 4)"
       >
-        <img src="../../../assets/jobs/pamcardMonitor/thumbnail-4.png" alt="" />
+        <img
+          src="../../../assets/jobs/pamcardMonitor/thumbnail-4.png"
+          alt="Job Pamcard Monitor Thumbnail 4"
+        />
       </div>
 
       <div
         class="item"
         (click)="showJobItemGallery('job-pamcard-monitor-5', 5)"
       >
-        <img src="../../../assets/jobs/pamcardMonitor/thumbnail-5.png" alt="" />
+        <img
+          src="../../../assets/jobs/pamcardMonitor/thumbnail-5.png"
+          alt="Job Pamcard Monitor Thumbnail 5"
+        />
       </div>
     </div>
     <!-- end.list #job-sistema-pamcard-list -->
@@ -619,9 +814,21 @@
       <div class="text">Fisiopole Sudio</div>
 
       <div class="link">
-        <a href="https://www.fisiopole.com.br/" target="_blank">
-          <div *ngIf="global.lang === 'en'">(Visit HTML Version)</div>
-          <div *ngIf="global.lang === 'pt'">(Veja a Versão HTML)</div>
+        <a
+          href="https://www.fisiopole.com.br/"
+          target="_blank"
+          [attr.aria-label]="
+            global.lang === 'en'
+              ? 'Visit Fisio Pole Art HTML Version'
+              : 'Veja a Versão HTML do Fisio Pole Art'
+          "
+        >
+          <div *ngIf="global.lang === 'en'" lang="en" aria-hidden="true">
+            (Visit HTML Version)
+          </div>
+          <div *ngIf="global.lang === 'pt'" lang="pt-br" aria-hidden="true">
+            (Veja a Versão HTML)
+          </div>
         </a>
       </div>
     </div>
@@ -649,35 +856,59 @@
     </div>
 
     <div class="item show" id="job-fisiopole-1">
-      <img src="../../../assets/jobs/fisiopole/1.png" alt="" />
+      <img
+        src="../../../assets/jobs/fisiopole/1.png"
+        alt="Job Fisio Pole Art Print 1"
+      />
     </div>
 
     <div class="item" id="job-fisiopole-2">
-      <img src="../../../assets/jobs/fisiopole/2.png" alt="" />
+      <img
+        src="../../../assets/jobs/fisiopole/2.png"
+        alt="Job Fisio Pole Art Print 2"
+      />
     </div>
 
     <div class="item" id="job-fisiopole-3">
-      <img src="../../../assets/jobs/fisiopole/3.png" alt="" />
+      <img
+        src="../../../assets/jobs/fisiopole/3.png"
+        alt="Job Fisio Pole Art Print 3"
+      />
     </div>
 
     <div class="item" id="job-fisiopole-4">
-      <img src="../../../assets/jobs/fisiopole/4.png" alt="" />
+      <img
+        src="../../../assets/jobs/fisiopole/4.png"
+        alt="Job Fisio Pole Art Print 4"
+      />
     </div>
 
     <div class="item" id="job-fisiopole-5">
-      <img src="../../../assets/jobs/fisiopole/5.png" alt="" />
+      <img
+        src="../../../assets/jobs/fisiopole/5.png"
+        alt="Job Fisio Pole Art Print 5"
+      />
     </div>
 
     <div class="item" id="job-fisiopole-6">
-      <img src="../../../assets/jobs/fisiopole/6.png" alt="" />
+      <img
+        src="../../../assets/jobs/fisiopole/6.png"
+        alt="Job Fisio Pole Art Print 6"
+      />
     </div>
 
     <div class="item" id="job-fisiopole-7">
-      <img src="../../../assets/jobs/fisiopole/7.png" alt="" />
+      <img
+        src="../../../assets/jobs/fisiopole/7.png"
+        alt="Job Fisio Pole Art Print 7"
+      />
     </div>
 
     <div class="item" id="job-fisiopole-8">
-      <img src="../../../assets/jobs/fisiopole/8.png" alt="" />
+      <img
+        src="../../../assets/jobs/fisiopole/8.png"
+        alt="Job Fisio Pole Art Print 8"
+      />
     </div>
   </div>
   <!-- end .main -->
@@ -695,35 +926,59 @@
 
     <div class="list" id="job-fisiopole-list">
       <div class="item" (click)="showJobItemGallery('job-fisiopole-1', 1)">
-        <img src="../../../assets/jobs/fisiopole/thumbnail-1.png" alt="" />
+        <img
+          src="../../../assets/jobs/fisiopole/thumbnail-1.png"
+          alt="Job Fisio Pole Art Thumbnail 1"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-fisiopole-2', 2)">
-        <img src="../../../assets/jobs/fisiopole/thumbnail-2.png" alt="" />
+        <img
+          src="../../../assets/jobs/fisiopole/thumbnail-2.png"
+          alt="Job Fisio Pole Art Thumbnail 2"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-fisiopole-3', 3)">
-        <img src="../../../assets/jobs/fisiopole/thumbnail-3.png" alt="" />
+        <img
+          src="../../../assets/jobs/fisiopole/thumbnail-3.png"
+          alt="Job Fisio Pole Art Thumbnail 3"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-fisiopole-4', 4)">
-        <img src="../../../assets/jobs/fisiopole/thumbnail-4.png" alt="" />
+        <img
+          src="../../../assets/jobs/fisiopole/thumbnail-4.png"
+          alt="Job Fisio Pole Art Thumbnail 4"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-fisiopole-5', 5)">
-        <img src="../../../assets/jobs/fisiopole/thumbnail-5.png" alt="" />
+        <img
+          src="../../../assets/jobs/fisiopole/thumbnail-5.png"
+          alt="Job Fisio Pole Art Thumbnail 5"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-fisiopole-6', 6)">
-        <img src="../../../assets/jobs/fisiopole/thumbnail-6.png" alt="" />
+        <img
+          src="../../../assets/jobs/fisiopole/thumbnail-6.png"
+          alt="Job Fisio Pole Art Thumbnail 6"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-fisiopole-7', 7)">
-        <img src="../../../assets/jobs/fisiopole/thumbnail-7.png" alt="" />
+        <img
+          src="../../../assets/jobs/fisiopole/thumbnail-7.png"
+          alt="Job Fisio Pole Art Thumbnail 7"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-fisiopole-8', 8)">
-        <img src="../../../assets/jobs/fisiopole/thumbnail-8.png" alt="" />
+        <img
+          src="../../../assets/jobs/fisiopole/thumbnail-8.png"
+          alt="Job Fisio Pole Art Thumbnail 8"
+        />
       </div>
     </div>
     <!-- end.list #job-sistema-pamcard-list -->
@@ -781,27 +1036,27 @@
     </div>
 
     <div class="item show" id="job-wedding-1">
-      <img src="../../../assets/jobs/wedding/1.png" alt="" />
+      <img src="../../../assets/jobs/wedding/1.png" alt="Job Wedding Print 1" />
     </div>
 
     <div class="item" id="job-wedding-2">
-      <img src="../../../assets/jobs/wedding/2.png" alt="" />
+      <img src="../../../assets/jobs/wedding/2.png" alt="Job Wedding Print 2" />
     </div>
 
     <div class="item" id="job-wedding-3">
-      <img src="../../../assets/jobs/wedding/3.png" alt="" />
+      <img src="../../../assets/jobs/wedding/3.png" alt="Job Wedding Print 3" />
     </div>
 
     <div class="item" id="job-wedding-4">
-      <img src="../../../assets/jobs/wedding/4.png" alt="" />
+      <img src="../../../assets/jobs/wedding/4.png" alt="Job Wedding Print 4" />
     </div>
 
     <div class="item" id="job-wedding-5">
-      <img src="../../../assets/jobs/wedding/5.png" alt="" />
+      <img src="../../../assets/jobs/wedding/5.png" alt="Job Wedding Print 5" />
     </div>
 
     <div class="item" id="job-wedding-6">
-      <img src="../../../assets/jobs/wedding/6.png" alt="" />
+      <img src="../../../assets/jobs/wedding/6.png" alt="Job Wedding Print 6" />
     </div>
   </div>
   <!-- end .main -->
@@ -817,27 +1072,45 @@
 
     <div class="list" id="job-wedding-list">
       <div class="item" (click)="showJobItemGallery('job-wedding-1', 1)">
-        <img src="../../../assets/jobs/wedding/thumbnail-1.png" alt="" />
+        <img
+          src="../../../assets/jobs/wedding/thumbnail-1.png"
+          alt="Job Wedding Thumbnail 1"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-wedding-2', 2)">
-        <img src="../../../assets/jobs/wedding/thumbnail-2.png" alt="" />
+        <img
+          src="../../../assets/jobs/wedding/thumbnail-2.png"
+          alt="Job Wedding Thumbnail 2"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-wedding-3', 3)">
-        <img src="../../../assets/jobs/wedding/thumbnail-3.png" alt="" />
+        <img
+          src="../../../assets/jobs/wedding/thumbnail-3.png"
+          alt="Job Wedding Thumbnail 3"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-wedding-4', 4)">
-        <img src="../../../assets/jobs/wedding/thumbnail-4.png" alt="" />
+        <img
+          src="../../../assets/jobs/wedding/thumbnail-4.png"
+          alt="Job Wedding Thumbnail 4"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-wedding-5', 5)">
-        <img src="../../../assets/jobs/wedding/thumbnail-5.png" alt="" />
+        <img
+          src="../../../assets/jobs/wedding/thumbnail-5.png"
+          alt="Job Wedding Thumbnail 5"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-wedding-6', 6)">
-        <img src="../../../assets/jobs/wedding/thumbnail-6.png" alt="" />
+        <img
+          src="../../../assets/jobs/wedding/thumbnail-6.png"
+          alt="Job Wedding Thumbnail 6"
+        />
       </div>
     </div>
     <!-- end.list #job-sistema-pamcard-list -->
@@ -893,27 +1166,45 @@
     </div>
 
     <div class="item show" id="job-pmsv-1">
-      <img src="../../../assets/jobs/pmsv/1.png" alt="" />
+      <img
+        src="../../../assets/jobs/pmsv/1.png"
+        alt="Job Prefeitura São Vicente Print 1"
+      />
     </div>
 
     <div class="item" id="job-pmsv-2">
-      <img src="../../../assets/jobs/pmsv/2.png" alt="" />
+      <img
+        src="../../../assets/jobs/pmsv/2.png"
+        alt="Job Prefeitura São Vicente Print 2"
+      />
     </div>
 
     <div class="item" id="job-pmsv-3">
-      <img src="../../../assets/jobs/pmsv/3.png" alt="" />
+      <img
+        src="../../../assets/jobs/pmsv/3.png"
+        alt="Job Prefeitura São Vicente Print 3"
+      />
     </div>
 
     <div class="item" id="job-pmsv-4">
-      <img src="../../../assets/jobs/pmsv/4.png" alt="" />
+      <img
+        src="../../../assets/jobs/pmsv/4.png"
+        alt="Job Prefeitura São Vicente Print 4"
+      />
     </div>
 
     <div class="item" id="job-pmsv-5">
-      <img src="../../../assets/jobs/pmsv/5.png" alt="" />
+      <img
+        src="../../../assets/jobs/pmsv/5.png"
+        alt="Job Prefeitura São Vicente Print 5"
+      />
     </div>
 
     <div class="item" id="job-pmsv-6">
-      <img src="../../../assets/jobs/pmsv/6.png" alt="" />
+      <img
+        src="../../../assets/jobs/pmsv/6.png"
+        alt="Job Prefeitura São Vicente Print 6"
+      />
     </div>
   </div>
   <!-- end .main -->
@@ -929,27 +1220,45 @@
 
     <div class="list" id="job-pmsv-list">
       <div class="item" (click)="showJobItemGallery('job-pmsv-1', 1)">
-        <img src="../../../assets/jobs/pmsv/thumbnail-1.png" alt="" />
+        <img
+          src="../../../assets/jobs/pmsv/thumbnail-1.png"
+          alt="Job Prefeitura São Vicente Thumbnail 1"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-pmsv-2', 2)">
-        <img src="../../../assets/jobs/pmsv/thumbnail-2.png" alt="" />
+        <img
+          src="../../../assets/jobs/pmsv/thumbnail-2.png"
+          alt="Job Prefeitura São Vicente Thumbnail 2"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-pmsv-3', 3)">
-        <img src="../../../assets/jobs/pmsv/thumbnail-3.png" alt="" />
+        <img
+          src="../../../assets/jobs/pmsv/thumbnail-3.png"
+          alt="Job Prefeitura São Vicente Thumbnail 3"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-pmsv-4', 4)">
-        <img src="../../../assets/jobs/pmsv/thumbnail-4.png" alt="" />
+        <img
+          src="../../../assets/jobs/pmsv/thumbnail-4.png"
+          alt="Job Prefeitura São Vicente Thumbnail 4"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-pmsv-5', 5)">
-        <img src="../../../assets/jobs/pmsv/thumbnail-5.png" alt="" />
+        <img
+          src="../../../assets/jobs/pmsv/thumbnail-5.png"
+          alt="Job Prefeitura São Vicente Thumbnail 5"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-pmsv-6', 6)">
-        <img src="../../../assets/jobs/pmsv/thumbnail-6.png" alt="" />
+        <img
+          src="../../../assets/jobs/pmsv/thumbnail-6.png"
+          alt="Job Prefeitura São Vicente Thumbnail 6"
+        />
       </div>
     </div>
     <!-- end.list #job-sistema-pamcard-list -->
@@ -1005,19 +1314,31 @@
     </div>
 
     <div class="item show" id="job-interface-eng-1">
-      <img src="../../../assets/jobs/interfaceEng/1.png" alt="" />
+      <img
+        src="../../../assets/jobs/interfaceEng/1.png"
+        alt="Job Interface Engenharia Print 1"
+      />
     </div>
 
     <div class="item" id="job-interface-eng-2">
-      <img src="../../../assets/jobs/interfaceEng/2.png" alt="" />
+      <img
+        src="../../../assets/jobs/interfaceEng/2.png"
+        alt="Job Interface Engenharia Print 2"
+      />
     </div>
 
     <div class="item" id="job-interface-eng-3">
-      <img src="../../../assets/jobs/interfaceEng/3.png" alt="" />
+      <img
+        src="../../../assets/jobs/interfaceEng/3.png"
+        alt="Job Interface Engenharia Print 3"
+      />
     </div>
 
     <div class="item" id="job-interface-eng-4">
-      <img src="../../../assets/jobs/interfaceEng/4.png" alt="" />
+      <img
+        src="../../../assets/jobs/interfaceEng/4.png"
+        alt="Job Interface Engenharia Print 4"
+      />
     </div>
   </div>
   <!-- end .main -->
@@ -1035,19 +1356,31 @@
 
     <div class="list" id="job-interface-eng-list">
       <div class="item" (click)="showJobItemGallery('job-interface-eng-1', 1)">
-        <img src="../../../assets/jobs/interfaceEng/thumbnail-1.png" alt="" />
+        <img
+          src="../../../assets/jobs/interfaceEng/thumbnail-1.png"
+          alt="Job Interface Engenharia Thumbnail 1"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-interface-eng-2', 2)">
-        <img src="../../../assets/jobs/interfaceEng/thumbnail-2.png" alt="" />
+        <img
+          src="../../../assets/jobs/interfaceEng/thumbnail-2.png"
+          alt="Job Interface Engenharia Thumbnail 2"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-interface-eng-3', 3)">
-        <img src="../../../assets/jobs/interfaceEng/thumbnail-3.png" alt="" />
+        <img
+          src="../../../assets/jobs/interfaceEng/thumbnail-3.png"
+          alt="Job Interface Engenharia Thumbnail 3"
+        />
       </div>
 
       <div class="item" (click)="showJobItemGallery('job-interface-eng-4', 4)">
-        <img src="../../../assets/jobs/interfaceEng/thumbnail-4.png" alt="" />
+        <img
+          src="../../../assets/jobs/interfaceEng/thumbnail-4.png"
+          alt="Job Interface Engenharia Thumbnail 4"
+        />
       </div>
     </div>
     <!-- end.list #job-sistema-pamcard-list -->

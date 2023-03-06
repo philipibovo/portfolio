@@ -4,7 +4,7 @@ rm -rf dist/tivolijs
 
 ng build --configuration=production --aot=true --build-optimizer=true --project portfolio
 
-#chown -R philipibovo: /home/philipi/Desenvolvimento/philipi/portfolio/dist
+cp -r robots.txt dist/robots.txt
 
 mkdir dist/navonajs
 cp -r ../navonajs/* dist/navonajs

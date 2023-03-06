@@ -28,11 +28,6 @@ export class JobsComponent implements OnInit {
     const sizeItem = document.querySelector('#list-jobs > .item')!.scrollWidth;
     const sizeMarginItem = 20;
 
-    console.log(qtdItems * (sizeItem + sizeMarginItem * 2));
-    console.log(qtdItems);
-    // console.log(wrapElement.getBoundingClientRect().width);
-    // console.log(window.innerWidth);
-
     if (
       qtdItems * (sizeItem + sizeMarginItem * 2) >
       wrapElement.getBoundingClientRect().width

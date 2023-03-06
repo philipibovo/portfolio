@@ -7,7 +7,10 @@
   <div class="main">
     <div class="item" id="project-limoney">
       <div *ngIf="global.isDesktop" class="image">
-        <img src="../../../assets/projects/limoney.png" alt="Logo Limoney" />
+        <img
+          src="../../../assets/projects/limoney.png"
+          alt="Logotipo Limoney"
+        />
       </div>
 
       <div *ngIf="global.isMobile" class="image">
@@ -31,9 +34,19 @@
         </div>
 
         <div class="link">
-          <a href="https://limoney.app" target="_blank">
-            <div *ngIf="global.lang === 'en'">Visit</div>
-            <div *ngIf="global.lang === 'pt'">Saiba mais</div>
+          <a
+            href="https://limoney.app"
+            target="_blank"
+            [attr.aria-label]="
+              global.lang === 'en'
+                ? 'Visit Limoney'
+                : 'Saiba mais sobre Limoney'
+            "
+          >
+            <div *ngIf="global.lang === 'en'" aria-hidden="true">Visit</div>
+            <div *ngIf="global.lang === 'pt'" aria-hidden="true">
+              Saiba mais
+            </div>
           </a>
         </div>
       </div>
@@ -43,7 +56,10 @@
 
     <div class="item" id="project-pompeijs">
       <div *ngIf="global.isDesktop" class="image">
-        <img src="../../../assets/projects/pompeijs.png" alt="Logo PompeiJS" />
+        <img
+          src="../../../assets/projects/pompeijs.png"
+          alt="Logotipo Pompei JS"
+        />
       </div>
 
       <div *ngIf="global.isMobile" class="image">
@@ -69,9 +85,19 @@
         </div>
 
         <div class="link">
-          <a href="https://philipi.bovo.me/pompeijs/" target="_blank">
-            <div *ngIf="global.lang === 'en'">Visit</div>
-            <div *ngIf="global.lang === 'pt'">Saiba mais</div>
+          <a
+            href="https://philipi.bovo.me/pompeijs/"
+            target="_blank"
+            [attr.aria-label]="
+              global.lang === 'en'
+                ? 'Visit Pompei JS'
+                : 'Saiba mais sobre Pompei JS'
+            "
+          >
+            <div *ngIf="global.lang === 'en'" aria-hidden="true">Visit</div>
+            <div *ngIf="global.lang === 'pt'" aria-hidden="true">
+              Saiba mais
+            </div>
           </a>
         </div>
       </div>
@@ -81,7 +107,10 @@
 
     <div class="item" id="project-tivolijs">
       <div *ngIf="global.isDesktop" class="image">
-        <img src="../../../assets/projects/tivolijs.png" alt="Logo TivoliJS" />
+        <img
+          src="../../../assets/projects/tivolijs.png"
+          alt="Logotipo Tivoli JS"
+        />
       </div>
 
       <div *ngIf="global.isMobile" class="image">
@@ -106,9 +135,19 @@
         </div>
 
         <div class="link">
-          <a href="https://philipi.bovo.me/tivolijs/" target="_blank">
-            <div *ngIf="global.lang === 'en'">Visit</div>
-            <div *ngIf="global.lang === 'pt'">Saiba mais</div>
+          <a
+            href="https://philipi.bovo.me/tivolijs/"
+            target="_blank"
+            [attr.aria-label]="
+              global.lang === 'en'
+                ? 'Visit Tivoli JS'
+                : 'Saiba mais sobre Tivoli JS'
+            "
+          >
+            <div *ngIf="global.lang === 'en'" aria-hidden="true">Visit</div>
+            <div *ngIf="global.lang === 'pt'" aria-hidden="true">
+              Saiba mais
+            </div>
           </a>
         </div>
       </div>
@@ -118,7 +157,10 @@
 
     <div class="item" id="project-navonajs">
       <div *ngIf="global.isDesktop" class="image">
-        <img src="../../../assets/projects/navonajs.png" alt="Logo NavonaJS" />
+        <img
+          src="../../../assets/projects/navonajs.png"
+          alt="Logotipo Navona JS"
+        />
       </div>
 
       <div *ngIf="global.isMobile" class="image">
@@ -142,9 +184,19 @@
         </div>
 
         <div class="link">
-          <a href="https://philipi.bovo.me/navonajs/" target="_blank">
-            <div *ngIf="global.lang === 'en'">Visit</div>
-            <div *ngIf="global.lang === 'pt'">Saiba mais</div>
+          <a
+            href="https://philipi.bovo.me/navonajs/"
+            target="_blank"
+            [attr.aria-label]="
+              global.lang === 'en'
+                ? 'Visit Navona JS'
+                : 'Saiba mais sobre Navona JS'
+            "
+          >
+            <div *ngIf="global.lang === 'en'" aria-hidden="true">Visit</div>
+            <div *ngIf="global.lang === 'pt'" aria-hidden="true">
+              Saiba mais
+            </div>
           </a>
         </div>
       </div>

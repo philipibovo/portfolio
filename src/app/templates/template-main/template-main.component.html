@@ -16,7 +16,7 @@
       <div class="image">
         <img
           src="../../../assets/logo/logo-white.svg"
-          alt="Logo Philipi Bovo"
+          alt="Logotipo Philipi Bovo Frontend Developer"
         />
       </div>
 
@@ -25,16 +25,20 @@
     <!-- end .logo -->
 
     <!-- .social -->
-    <div class="social">
+    <div class="social" role="menu">
       <!-- #icon-linkedin -->
       <div
         *ngIf="global.isDesktop"
         id="icon-linkedin"
         class="social-icon hint--bottom"
         [class]="global.socialIconTheme"
-        aria-label="Linkedin"
+        role="menuitem"
       >
-        <a href="https://www.linkedin.com/in/philipi-bovo/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/philipi-bovo/"
+          target="_blank"
+          aria-label="Linkedin Philipi Bovo"
+        >
           <i class="fab fa-linkedin-in"></i>
         </a>
       </div>
@@ -44,8 +48,13 @@
         id="icon-linkedin"
         class="social-icon"
         [class]="global.socialIconTheme"
+        role="menuitem"
       >
-        <a href="https://www.linkedin.com/in/philipi-bovo/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/philipi-bovo/"
+          target="_blank"
+          aria-label="Linkedin Philipi Bovo"
+        >
           <i class="fab fa-linkedin-in"></i>
         </a>
       </div>
@@ -57,9 +66,13 @@
         id="icon-github"
         class="social-icon hint--bottom"
         [class]="global.socialIconTheme"
-        aria-label="Github"
+        role="menuitem"
       >
-        <a href="https://github.com/philipibovo" target="_blank">
+        <a
+          href="https://github.com/philipibovo"
+          target="_blank"
+          aria-label="Github Philipi Bovo"
+        >
           <i class="fab fa-github"></i>
         </a>
       </div>
@@ -69,8 +82,13 @@
         id="icon-github"
         class="social-icon"
         [class]="global.socialIconTheme"
+        role="menuitem"
       >
-        <a href="https://github.com/philipibovo" target="_blank">
+        <a
+          href="https://github.com/philipibovo"
+          target="_blank"
+          aria-label="Github Philipi Bovo"
+        >
           <i class="fab fa-github"></i>
         </a>
       </div>
@@ -81,9 +99,12 @@
         *ngIf="global.isDesktop"
         id="icon-cv"
         class="social-icon hint--bottom"
-        [class]="global.socialIconTheme"
         aria-label="Curriculum Vitae"
+        role="menuitem"
+        [class]="global.socialIconTheme"
         (click)="scripts.openCvNewTab()"
+        (keydown.enter)="scripts.openCvNewTab()"
+        (keydown.space)="scripts.openCvNewTab()"
       >
         <i class="far fa-address-card"></i>
       </div>

@@ -22,14 +22,22 @@
 
       <p>
         Portfolio:
-        <a href="https://philipi.bovo.me" target="_blank">
+        <a
+          href="https://philipi.bovo.me"
+          target="_blank"
+          aria-label="Portfolio Philipi Bovo"
+        >
           https://philipi.bovo.me
         </a>
       </p>
 
       <p>
         Github:
-        <a href="http://www.github.com/philipibovo" target="_blank">
+        <a
+          href="http://www.github.com/philipibovo"
+          target="_blank"
+          aria-label="Github Philipi Bovo"
+        >
           http://www.github.com/philipibovo
         </a>
       </p>
@@ -428,7 +436,13 @@
 
         <div>
           Website:
-          <a href="https://limoney.app" target="_blank">
+          <a
+            href="https://limoney.app"
+            target="_blank"
+            [attr.aria-label]="
+              global.lang === 'en' ? 'Visit Limoney' : 'Acesso Limoney'
+            "
+          >
             https://limoney.app
           </a>
         </div>
@@ -456,7 +470,15 @@
 
         <div>
           Website:
-          <a href="https://philipi.bovo.me/pompeijs/" target="_blank">
+          <a
+            href="https://philipi.bovo.me/pompeijs/"
+            target="_blank"
+            [attr.aria-label]="
+              global.lang === 'en'
+                ? 'Visit Pompei JS'
+                : 'Saiba mais sobre Pompei JS'
+            "
+          >
             https://philipi.bovo.me/pompeijs/
           </a>
         </div>
@@ -484,7 +506,15 @@
 
         <div>
           Website:
-          <a href="https://philipi.bovo.me/tivolijs/" target="_blank">
+          <a
+            href="https://philipi.bovo.me/tivolijs/"
+            target="_blank"
+            [attr.aria-label]="
+              global.lang === 'en'
+                ? 'Visit Tivoli JS'
+                : 'Saiba mais sobre Tivoli JS'
+            "
+          >
             https://philipi.bovo.me/tivolijs/
           </a>
         </div>
@@ -507,7 +537,15 @@
 
         <div>
           Website:
-          <a href="https://philipi.bovo.me/navonajs/" target="_blank">
+          <a
+            href="https://philipi.bovo.me/navonajs/"
+            target="_blank"
+            [attr.aria-label]="
+              global.lang === 'en'
+                ? 'Visit Navona JS'
+                : 'Saiba mais sobre Navona JS'
+            "
+          >
             https://philipi.bovo.me/navonajs/
           </a>
         </div>
@@ -517,6 +555,9 @@
   <!-- end .section #projects -->
 
   <div class="bottom no-print">
-    <img src="../../../assets/logo/logo-black.png" alt="" />
+    <img
+      src="../../../assets/logo/logo-black.png"
+      alt="Logotipo Philipi Frontend Developer"
+    />
   </div>
 </div>
