@@ -129,7 +129,7 @@
         aria-label="Versão em Protuguês"
         (click)="scripts.setLang('pt')"
       >
-        <img src="../assets/icons/brazil-flag.png" alt="Icon Brazil Flag" />
+        <img src="../assets/icons/brazil-flag.png" alt="" />
       </div>
 
       <div
@@ -139,7 +139,7 @@
         [class]="global.socialIconTheme"
         (click)="scripts.setLang('pt')"
       >
-        <img src="../assets/icons/brazil-flag.png" alt="Icon Brazil Flag" />
+        <img src="../assets/icons/brazil-flag.png" alt="" />
       </div>
 
       <div
@@ -150,7 +150,7 @@
         aria-label="English Version"
         (click)="scripts.setLang('en')"
       >
-        <img src="../assets/icons/uk-flag.png" alt="Icon UK Flag" />
+        <img src="../assets/icons/uk-flag.png" alt="" />
       </div>
 
       <div
@@ -160,7 +160,7 @@
         [class]="global.socialIconTheme"
         (click)="scripts.setLang('en')"
       >
-        <img src="../assets/icons/uk-flag.png" alt="Icon UK Flag" />
+        <img src="../assets/icons/uk-flag.png" alt="" />
       </div>
       <!-- end #icon-lang -->
     </div>
@@ -171,35 +171,35 @@
       <!-- .item .first -->
       <div class="item first">
         <!-- .title -->
-        <div class="title">
-          <div *ngIf="global.lang === 'en'">
-            Front End Developer & UX Enthusiast
-          </div>
-
-          <div *ngIf="global.lang === 'pt'">
-            Desenvolvedor Front End & Entusiasta em UX
-          </div>
-        </div>
+        <h1 class="title">
+          <span>
+            {{
+              global.lang === 'en'
+                ? 'Front End Developer & UX Enthusiast'
+                : 'Desenvolvedor Front End & Entusiasta em UX'
+            }}
+          </span>
+        </h1>
         <!-- end .title -->
 
         <!-- .subtitle -->
-        <div class="subtitle">
-          <div *ngIf="global.lang === 'en'">
-            I like to create simple, objective and intuitive things.
-          </div>
-
-          <div *ngIf="global.lang === 'pt'">
-            Gosto de criar coisas simples, objetivas e intuitivas.
-          </div>
-        </div>
+        <h2 class="subtitle">
+          <span>
+            {{
+              global.lang === 'en'
+                ? 'I like to create simple, objective and intuitive things.'
+                : 'Gosto de criar coisas simples, objetivas e intuitivas.'
+            }}
+          </span>
+        </h2>
       </div>
       <!-- end .item .first -->
 
-      <!-- .item .decond -->
-      <div class="item second">
-        <div>Hello World,</div>
+      <!-- .item .second -->
+      <h3 class="item second">
+        <p>Hello World,</p>
 
-        <div *ngIf="global.lang === 'en'">
+        <p *ngIf="global.lang === 'en'">
           I have dual natiolities, I'm Brazilan and Portuguese. Graduated in
           Computer Science, I started my career as a developer in 2009, worked
           for pharmaceutical, financial, logistics, insurance and internet
@@ -208,9 +208,9 @@
           products, user-friendly, making the user experience more intuitive.
           Curious by nature, I am always looking for new learning , always
           improving professionally.
-        </div>
+        </p>
 
-        <div *ngIf="global.lang === 'pt'">
+        <p *ngIf="global.lang === 'pt'">
           Luso-Brasileiro, formado em Ciência da Computação, iniciei minha
           carreira como desenvolvedor em 2009, trabalhei para empresas dos
           setores varejistas, farmacêuticos, financeiros, logísticos, seguros e
@@ -219,8 +219,8 @@
           multi-plataformas, amigáveis aos usuários, tornando a experiência de
           uso mais intuitiva. Curioso por natureza, estou sempre atrás de novos
           aprendizados, sempre melhorando profissionalemte.
-        </div>
-      </div>
+        </p>
+      </h3>
       <!-- end .item .second -->
     </div>
     <!-- end .main -->

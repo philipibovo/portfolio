@@ -18,8 +18,4 @@ mkdir dist/tivolijs
 cp -r ../tivolijs/* dist/tivolijs
 #chown -R philipibovo: /Users/philipibovo/Development/philipi/portfolio/dist/tivolijs
 
-
-
-
-
-# firebase deploy
+#firebase deploy
