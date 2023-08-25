@@ -1,8 +1,8 @@
 <div class="content">
-  <div class="title">
+  <h1 class="title">
     <div *ngIf="global.lang === 'en'">Projects</div>
     <div *ngIf="global.lang === 'pt'">Projetos</div>
-  </div>
+  </h1>
 
   <div class="main">
     <div class="item" id="project-limoney">
@@ -24,12 +24,22 @@
         <div class="name">Limoney</div>
 
         <div class="text">
-          <div *ngIf="global.lang === 'en'">
-            Personal financial management assistance app. (Under development)
-          </div>
-
-          <div *ngIf="global.lang === 'pt'">
-            App de auxílio de gestão financeira pessoal. (Em desenvolvimento)
+          <div
+            [class.font-size-1]="
+              global.accessibilityCurrentFontSize === 'font-size-1'
+            "
+            [class.font-size-2]="
+              global.accessibilityCurrentFontSize === 'font-size-2'
+            "
+            [class.font-size-3]="
+              global.accessibilityCurrentFontSize === 'font-size-3'
+            "
+          >
+            {{
+              global.lang === 'en'
+                ? 'Personal financial management assistance app.'
+                : 'App de auxílio de gestão financeira pessoal.'
+            }}
           </div>
         </div>
 
@@ -43,9 +53,20 @@
                 : 'Saiba mais sobre Limoney'
             "
           >
-            <div *ngIf="global.lang === 'en'" aria-hidden="true">Visit</div>
-            <div *ngIf="global.lang === 'pt'" aria-hidden="true">
-              Saiba mais
+            <div
+              aria-hidden="true"
+              class="link-style"
+              [class.font-size-1]="
+                global.accessibilityCurrentFontSize === 'font-size-1'
+              "
+              [class.font-size-2]="
+                global.accessibilityCurrentFontSize === 'font-size-2'
+              "
+              [class.font-size-3]="
+                global.accessibilityCurrentFontSize === 'font-size-3'
+              "
+            >
+              {{ global.lang === 'en' ? 'Visit' : 'Saiba Mais' }}
             </div>
           </a>
         </div>
@@ -73,14 +94,22 @@
         <div class="name">pompei.js</div>
 
         <div class="text">
-          <div *ngIf="global.lang === 'en'">
-            CSS / JQuery library for creating responsive layouts based on rows
-            and columns.
-          </div>
-
-          <div *ngIf="global.lang === 'pt'">
-            Biblioteca CSS/JQuery para criar layouts responsívos baseados em
-            linhas e colunas.
+          <div
+            [class.font-size-1]="
+              global.accessibilityCurrentFontSize === 'font-size-1'
+            "
+            [class.font-size-2]="
+              global.accessibilityCurrentFontSize === 'font-size-2'
+            "
+            [class.font-size-3]="
+              global.accessibilityCurrentFontSize === 'font-size-3'
+            "
+          >
+            {{
+              global.lang === 'en'
+                ? 'CSS / JQuery library for creating responsive layouts based on rows and columns.'
+                : 'Biblioteca CSS/JQuery para criar layouts responsívos baseados em linhas e colunas.'
+            }}
           </div>
         </div>
 
@@ -94,9 +123,20 @@
                 : 'Saiba mais sobre Pompei JS'
             "
           >
-            <div *ngIf="global.lang === 'en'" aria-hidden="true">Visit</div>
-            <div *ngIf="global.lang === 'pt'" aria-hidden="true">
-              Saiba mais
+            <div
+              aria-hidden="true"
+              class="link-style"
+              [class.font-size-1]="
+                global.accessibilityCurrentFontSize === 'font-size-1'
+              "
+              [class.font-size-2]="
+                global.accessibilityCurrentFontSize === 'font-size-2'
+              "
+              [class.font-size-3]="
+                global.accessibilityCurrentFontSize === 'font-size-3'
+              "
+            >
+              {{ global.lang === 'en' ? 'Visit' : 'Saiba mais' }}
             </div>
           </a>
         </div>
@@ -124,13 +164,22 @@
         <div class="name">tivoli.js</div>
 
         <div class="text">
-          <div *ngIf="global.lang === 'en'">
-            CSS / JQuery library to facilitate the use of forms on pages HTML.
-          </div>
-
-          <div *ngIf="global.lang === 'pt'">
-            Biblioteca CSS/JQuery para facilitar o uso de formulários em páginas
-            HTML.
+          <div
+            [class.font-size-1]="
+              global.accessibilityCurrentFontSize === 'font-size-1'
+            "
+            [class.font-size-2]="
+              global.accessibilityCurrentFontSize === 'font-size-2'
+            "
+            [class.font-size-3]="
+              global.accessibilityCurrentFontSize === 'font-size-3'
+            "
+          >
+            {{
+              global.lang === 'en'
+                ? 'CSS / JQuery library to facilitate the use of forms on pages HTML.'
+                : 'Biblioteca CSS/JQuery para facilitar o uso de formulários em páginas HTML.'
+            }}
           </div>
         </div>
 
@@ -144,9 +193,20 @@
                 : 'Saiba mais sobre Tivoli JS'
             "
           >
-            <div *ngIf="global.lang === 'en'" aria-hidden="true">Visit</div>
-            <div *ngIf="global.lang === 'pt'" aria-hidden="true">
-              Saiba mais
+            <div
+              aria-hidden="true"
+              class="link-style"
+              [class.font-size-1]="
+                global.accessibilityCurrentFontSize === 'font-size-1'
+              "
+              [class.font-size-2]="
+                global.accessibilityCurrentFontSize === 'font-size-2'
+              "
+              [class.font-size-3]="
+                global.accessibilityCurrentFontSize === 'font-size-3'
+              "
+            >
+              {{ global.lang === 'en' ? 'Visit' : 'Saiba mais' }}
             </div>
           </a>
         </div>
@@ -174,12 +234,22 @@
         <div class="name">navona.js</div>
 
         <div class="text">
-          <div *ngIf="global.lang === 'en'">
-            CSS / JQuery photo gallery elegant and easy to use.
-          </div>
-
-          <div *ngIf="global.lang === 'pt'">
-            Galeria de fotos CSS/JQuery elegante e fácil de usar.
+          <div
+            [class.font-size-1]="
+              global.accessibilityCurrentFontSize === 'font-size-1'
+            "
+            [class.font-size-2]="
+              global.accessibilityCurrentFontSize === 'font-size-2'
+            "
+            [class.font-size-3]="
+              global.accessibilityCurrentFontSize === 'font-size-3'
+            "
+          >
+            {{
+              global.lang === 'en'
+                ? 'CSS / JQuery photo gallery elegant and easy to use.'
+                : 'Galeria de fotos CSS/JQuery elegante e fácil de usar.'
+            }}
           </div>
         </div>
 
@@ -193,9 +263,20 @@
                 : 'Saiba mais sobre Navona JS'
             "
           >
-            <div *ngIf="global.lang === 'en'" aria-hidden="true">Visit</div>
-            <div *ngIf="global.lang === 'pt'" aria-hidden="true">
-              Saiba mais
+            <div
+              aria-hidden="true"
+              class="link-style"
+              [class.font-size-1]="
+                global.accessibilityCurrentFontSize === 'font-size-1'
+              "
+              [class.font-size-2]="
+                global.accessibilityCurrentFontSize === 'font-size-2'
+              "
+              [class.font-size-3]="
+                global.accessibilityCurrentFontSize === 'font-size-3'
+              "
+            >
+              {{ global.lang === 'en' ? 'Visit' : 'Saiba mais' }}
             </div>
           </a>
         </div>

@@ -1,12 +1,12 @@
 <div class="content">
   <!-- .title -->
-  <div class="title">
+  <h1 class="title">
     <div *ngIf="global.lang === 'en'">Languages &</div>
     <div *ngIf="global.lang === 'en'">Tools</div>
 
     <div *ngIf="global.lang === 'pt'">Linguages &</div>
     <div *ngIf="global.lang === 'pt'">Ferramentas</div>
-  </div>
+  </h1>
   <!-- end .title -->
 
   <!-- .main -->
@@ -20,7 +20,19 @@
           />
         </div>
 
-        <div>Javascript</div>
+        <div
+          [class.font-size-1]="
+            global.accessibilityCurrentFontSize === 'font-size-1'
+          "
+          [class.font-size-2]="
+            global.accessibilityCurrentFontSize === 'font-size-2'
+          "
+          [class.font-size-3]="
+            global.accessibilityCurrentFontSize === 'font-size-3'
+          "
+        >
+          Javascript
+        </div>
       </div>
 
       <div class="item">
@@ -28,7 +40,19 @@
           <img src="../../../assets/tools/css3.png" alt="Logotipo CSS 3" />
         </div>
 
-        <div>CSS 3</div>
+        <div
+          [class.font-size-1]="
+            global.accessibilityCurrentFontSize === 'font-size-1'
+          "
+          [class.font-size-2]="
+            global.accessibilityCurrentFontSize === 'font-size-2'
+          "
+          [class.font-size-3]="
+            global.accessibilityCurrentFontSize === 'font-size-3'
+          "
+        >
+          CSS 3
+        </div>
       </div>
     </div>
 
@@ -41,7 +65,19 @@
           />
         </div>
 
-        <div>Typescript</div>
+        <div
+          [class.font-size-1]="
+            global.accessibilityCurrentFontSize === 'font-size-1'
+          "
+          [class.font-size-2]="
+            global.accessibilityCurrentFontSize === 'font-size-2'
+          "
+          [class.font-size-3]="
+            global.accessibilityCurrentFontSize === 'font-size-3'
+          "
+        >
+          Typescript
+        </div>
       </div>
 
       <div class="item">
@@ -49,7 +85,19 @@
           <img src="../../../assets/tools/angular.png" alt="Logotipo Angular" />
         </div>
 
-        <div>Angular</div>
+        <div
+          [class.font-size-1]="
+            global.accessibilityCurrentFontSize === 'font-size-1'
+          "
+          [class.font-size-2]="
+            global.accessibilityCurrentFontSize === 'font-size-2'
+          "
+          [class.font-size-3]="
+            global.accessibilityCurrentFontSize === 'font-size-3'
+          "
+        >
+          Angular
+        </div>
       </div>
     </div>
 
@@ -59,7 +107,19 @@
           <img src="../../../assets/tools/html5.png" alt="Logotipo HTML 5" />
         </div>
 
-        <div>HTML 5</div>
+        <div
+          [class.font-size-1]="
+            global.accessibilityCurrentFontSize === 'font-size-1'
+          "
+          [class.font-size-2]="
+            global.accessibilityCurrentFontSize === 'font-size-2'
+          "
+          [class.font-size-3]="
+            global.accessibilityCurrentFontSize === 'font-size-3'
+          "
+        >
+          HTML 5
+        </div>
       </div>
 
       <div class="item">
@@ -70,8 +130,32 @@
           />
         </div>
 
-        <div>Single-SPA</div>
-        <div>Micro frontend</div>
+        <div
+          [class.font-size-1]="
+            global.accessibilityCurrentFontSize === 'font-size-1'
+          "
+          [class.font-size-2]="
+            global.accessibilityCurrentFontSize === 'font-size-2'
+          "
+          [class.font-size-3]="
+            global.accessibilityCurrentFontSize === 'font-size-3'
+          "
+        >
+          Single-SPA
+        </div>
+        <div
+          [class.font-size-1]="
+            global.accessibilityCurrentFontSize === 'font-size-1'
+          "
+          [class.font-size-2]="
+            global.accessibilityCurrentFontSize === 'font-size-2'
+          "
+          [class.font-size-3]="
+            global.accessibilityCurrentFontSize === 'font-size-3'
+          "
+        >
+          Micro frontend
+        </div>
       </div>
     </div>
   </div>

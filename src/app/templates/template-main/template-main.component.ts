@@ -26,6 +26,7 @@ export class TemplateMainComponent implements OnInit {
     this._latsPosScroll = window.pageYOffset;
 
     this.scripts.start(this.global.currentViewHeight, this._latsPosScroll);
+    this.scripts.setTheme(`theme-original`);
 
     window.addEventListener('keydown', (event) => {
       event.preventDefault();

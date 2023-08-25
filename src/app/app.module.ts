@@ -24,6 +24,7 @@ import { TemplateCvComponent } from './templates/template-cv/template-cv.compone
 import { CvComponent } from './pages/cv/cv.component';
 import { TemplateNotFoundComponent } from './templates/template-not-found/template-not-found.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { AccessibilityComponent } from './pages/accessibility/accessibility.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     CvComponent,
     TemplateNotFoundComponent,
     NotFoundComponent,
+    AccessibilityComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' }, Global, ScriptGeneral],

@@ -1,26 +1,58 @@
 <!-- #about -->
 <section
   id="about"
+  [class]="global.currentTheme"
   [class.landscape]="global.isLandscape"
   [class.portrait]="global.isPortrait"
   (window:resize)="scripts.resizedWindow()"
 >
   <!-- .email -->
-  <div class="email">philipi@bovo.me</div>
+  <div
+    class="email"
+    [class.font-size-1]="global.accessibilityCurrentFontSize === 'font-size-1'"
+    [class.font-size-2]="global.accessibilityCurrentFontSize === 'font-size-2'"
+    [class.font-size-3]="global.accessibilityCurrentFontSize === 'font-size-3'"
+  >
+    philipi@bovo.me
+  </div>
   <!-- end .email -->
 
   <!-- .content -->
   <div class="content">
     <!-- .logo -->
     <div class="logo">
-      <div class="image">
+      <div
+        class="image"
+        [class.font-size-1]="
+          global.accessibilityCurrentFontSize === 'font-size-1'
+        "
+        [class.font-size-2]="
+          global.accessibilityCurrentFontSize === 'font-size-2'
+        "
+        [class.font-size-3]="
+          global.accessibilityCurrentFontSize === 'font-size-3'
+        "
+      >
         <img
           src="../../../assets/logo/logo-white.svg"
           alt="Logotipo Philipi Bovo Frontend Developer"
         />
       </div>
 
-      <div class="text">Philipi Bovo</div>
+      <h1
+        class="text"
+        [class.font-size-1]="
+          global.accessibilityCurrentFontSize === 'font-size-1'
+        "
+        [class.font-size-2]="
+          global.accessibilityCurrentFontSize === 'font-size-2'
+        "
+        [class.font-size-3]="
+          global.accessibilityCurrentFontSize === 'font-size-3'
+        "
+      >
+        Philipi Bovo
+      </h1>
     </div>
     <!-- end .logo -->
 
@@ -29,10 +61,19 @@
       <!-- #icon-linkedin -->
       <div
         *ngIf="global.isDesktop"
-        id="icon-linkedin"
         class="social-icon hint--bottom"
-        [class]="global.socialIconTheme"
+        id="icon-linkedin"
         role="menuitem"
+        [class]="global.socialIconTheme"
+        [class.font-size-1]="
+          global.accessibilityCurrentFontSize === 'font-size-1'
+        "
+        [class.font-size-2]="
+          global.accessibilityCurrentFontSize === 'font-size-2'
+        "
+        [class.font-size-3]="
+          global.accessibilityCurrentFontSize === 'font-size-3'
+        "
       >
         <a
           href="https://www.linkedin.com/in/philipi-bovo/"
@@ -45,10 +86,19 @@
 
       <div
         *ngIf="global.isMobile"
-        id="icon-linkedin"
         class="social-icon"
-        [class]="global.socialIconTheme"
+        id="icon-linkedin"
         role="menuitem"
+        [class]="global.socialIconTheme"
+        [class.font-size-1]="
+          global.accessibilityCurrentFontSize === 'font-size-1'
+        "
+        [class.font-size-2]="
+          global.accessibilityCurrentFontSize === 'font-size-2'
+        "
+        [class.font-size-3]="
+          global.accessibilityCurrentFontSize === 'font-size-3'
+        "
       >
         <a
           href="https://www.linkedin.com/in/philipi-bovo/"
@@ -63,10 +113,19 @@
       <!-- #icon-github -->
       <div
         *ngIf="global.isDesktop"
-        id="icon-github"
         class="social-icon hint--bottom"
-        [class]="global.socialIconTheme"
+        id="icon-github"
         role="menuitem"
+        [class]="global.socialIconTheme"
+        [class.font-size-1]="
+          global.accessibilityCurrentFontSize === 'font-size-1'
+        "
+        [class.font-size-2]="
+          global.accessibilityCurrentFontSize === 'font-size-2'
+        "
+        [class.font-size-3]="
+          global.accessibilityCurrentFontSize === 'font-size-3'
+        "
       >
         <a
           href="https://github.com/philipibovo"
@@ -79,10 +138,19 @@
 
       <div
         *ngIf="global.isMobile"
-        id="icon-github"
         class="social-icon"
-        [class]="global.socialIconTheme"
+        id="icon-github"
         role="menuitem"
+        [class]="global.socialIconTheme"
+        [class.font-size-1]="
+          global.accessibilityCurrentFontSize === 'font-size-1'
+        "
+        [class.font-size-2]="
+          global.accessibilityCurrentFontSize === 'font-size-2'
+        "
+        [class.font-size-3]="
+          global.accessibilityCurrentFontSize === 'font-size-3'
+        "
       >
         <a
           href="https://github.com/philipibovo"
@@ -97,11 +165,20 @@
       <!-- #icon-cv -->
       <div
         *ngIf="global.isDesktop"
+        aria-label="Curriculum Vitae"
         id="icon-cv"
         class="social-icon hint--bottom"
-        aria-label="Curriculum Vitae"
         role="menuitem"
         [class]="global.socialIconTheme"
+        [class.font-size-1]="
+          global.accessibilityCurrentFontSize === 'font-size-1'
+        "
+        [class.font-size-2]="
+          global.accessibilityCurrentFontSize === 'font-size-2'
+        "
+        [class.font-size-3]="
+          global.accessibilityCurrentFontSize === 'font-size-3'
+        "
         (click)="scripts.openCvNewTab()"
         (keydown.enter)="scripts.openCvNewTab()"
         (keydown.space)="scripts.openCvNewTab()"
@@ -111,10 +188,19 @@
 
       <div
         *ngIf="global.isMobile"
-        id="icon-cv"
         class="social-icon"
+        id="icon-cv"
         [class]="global.socialIconTheme"
         (click)="scripts.openCvNewTab()"
+        [class.font-size-1]="
+          global.accessibilityCurrentFontSize === 'font-size-1'
+        "
+        [class.font-size-2]="
+          global.accessibilityCurrentFontSize === 'font-size-2'
+        "
+        [class.font-size-3]="
+          global.accessibilityCurrentFontSize === 'font-size-3'
+        "
       >
         <i class="far fa-address-card"></i>
       </div>
@@ -123,10 +209,19 @@
       <!-- #icon-lang -->
       <div
         *ngIf="global.isDesktop && global.lang === 'en'"
+        aria-label="Versão em Protuguês"
         id="icon-lang"
         class="social-icon hint--left"
         [class]="global.socialIconTheme"
-        aria-label="Versão em Protuguês"
+        [class.font-size-1]="
+          global.accessibilityCurrentFontSize === 'font-size-1'
+        "
+        [class.font-size-2]="
+          global.accessibilityCurrentFontSize === 'font-size-2'
+        "
+        [class.font-size-3]="
+          global.accessibilityCurrentFontSize === 'font-size-3'
+        "
         (click)="scripts.setLang('pt')"
       >
         <img src="../assets/icons/brazil-flag.png" alt="" />
@@ -134,9 +229,18 @@
 
       <div
         *ngIf="global.isMobile && global.lang === 'en'"
-        id="icon-lang"
         class="social-icon"
+        id="icon-lang"
         [class]="global.socialIconTheme"
+        [class.font-size-1]="
+          global.accessibilityCurrentFontSize === 'font-size-1'
+        "
+        [class.font-size-2]="
+          global.accessibilityCurrentFontSize === 'font-size-2'
+        "
+        [class.font-size-3]="
+          global.accessibilityCurrentFontSize === 'font-size-3'
+        "
         (click)="scripts.setLang('pt')"
       >
         <img src="../assets/icons/brazil-flag.png" alt="" />
@@ -144,10 +248,19 @@
 
       <div
         *ngIf="global.isDesktop && global.lang === 'pt'"
-        id="icon-lang"
-        class="social-icon hint--left"
-        [class]="global.socialIconTheme"
         aria-label="English Version"
+        class="social-icon hint--left"
+        id="icon-lang"
+        [class]="global.socialIconTheme"
+        [class.font-size-1]="
+          global.accessibilityCurrentFontSize === 'font-size-1'
+        "
+        [class.font-size-2]="
+          global.accessibilityCurrentFontSize === 'font-size-2'
+        "
+        [class.font-size-3]="
+          global.accessibilityCurrentFontSize === 'font-size-3'
+        "
         (click)="scripts.setLang('en')"
       >
         <img src="../assets/icons/uk-flag.png" alt="" />
@@ -155,9 +268,18 @@
 
       <div
         *ngIf="global.isMobile && global.lang === 'pt'"
-        id="icon-lang"
         class="social-icon"
+        id="icon-lang"
         [class]="global.socialIconTheme"
+        [class.font-size-1]="
+          global.accessibilityCurrentFontSize === 'font-size-1'
+        "
+        [class.font-size-2]="
+          global.accessibilityCurrentFontSize === 'font-size-2'
+        "
+        [class.font-size-3]="
+          global.accessibilityCurrentFontSize === 'font-size-3'
+        "
         (click)="scripts.setLang('en')"
       >
         <img src="../assets/icons/uk-flag.png" alt="" />
@@ -171,7 +293,18 @@
       <!-- .item .first -->
       <div class="item first">
         <!-- .title -->
-        <h1 class="title">
+        <h2
+          class="title"
+          [class.font-size-1]="
+            global.accessibilityCurrentFontSize === 'font-size-1'
+          "
+          [class.font-size-2]="
+            global.accessibilityCurrentFontSize === 'font-size-2'
+          "
+          [class.font-size-3]="
+            global.accessibilityCurrentFontSize === 'font-size-3'
+          "
+        >
           <span>
             {{
               global.lang === 'en'
@@ -179,11 +312,22 @@
                 : 'Desenvolvedor Front End & Entusiasta em UX'
             }}
           </span>
-        </h1>
+        </h2>
         <!-- end .title -->
 
         <!-- .subtitle -->
-        <h2 class="subtitle">
+        <h3
+          class="subtitle"
+          [class.font-size-1]="
+            global.accessibilityCurrentFontSize === 'font-size-1'
+          "
+          [class.font-size-2]="
+            global.accessibilityCurrentFontSize === 'font-size-2'
+          "
+          [class.font-size-3]="
+            global.accessibilityCurrentFontSize === 'font-size-3'
+          "
+        >
           <span>
             {{
               global.lang === 'en'
@@ -191,15 +335,38 @@
                 : 'Gosto de criar coisas simples, objetivas e intuitivas.'
             }}
           </span>
-        </h2>
+        </h3>
       </div>
       <!-- end .item .first -->
 
       <!-- .item .second -->
       <h3 class="item second">
-        <p>Hello World,</p>
+        <p
+          [class.font-size-1]="
+            global.accessibilityCurrentFontSize === 'font-size-1'
+          "
+          [class.font-size-2]="
+            global.accessibilityCurrentFontSize === 'font-size-2'
+          "
+          [class.font-size-3]="
+            global.accessibilityCurrentFontSize === 'font-size-3'
+          "
+        >
+          Hello World,
+        </p>
 
-        <p *ngIf="global.lang === 'en'">
+        <p
+          *ngIf="global.lang === 'en'"
+          [class.font-size-1]="
+            global.accessibilityCurrentFontSize === 'font-size-1'
+          "
+          [class.font-size-2]="
+            global.accessibilityCurrentFontSize === 'font-size-2'
+          "
+          [class.font-size-3]="
+            global.accessibilityCurrentFontSize === 'font-size-3'
+          "
+        >
           I have dual natiolities, I'm Brazilan and Portuguese. Graduated in
           Computer Science, I started my career as a developer in 2009, worked
           for pharmaceutical, financial, logistics, insurance and internet
@@ -210,7 +377,18 @@
           improving professionally.
         </p>
 
-        <p *ngIf="global.lang === 'pt'">
+        <p
+          *ngIf="global.lang === 'pt'"
+          [class.font-size-1]="
+            global.accessibilityCurrentFontSize === 'font-size-1'
+          "
+          [class.font-size-2]="
+            global.accessibilityCurrentFontSize === 'font-size-2'
+          "
+          [class.font-size-3]="
+            global.accessibilityCurrentFontSize === 'font-size-3'
+          "
+        >
           Luso-Brasileiro, formado em Ciência da Computação, iniciei minha
           carreira como desenvolvedor em 2009, trabalhei para empresas dos
           setores varejistas, farmacêuticos, financeiros, logísticos, seguros e
@@ -232,6 +410,7 @@
 <!-- #tools -->
 <section
   id="tools"
+  [class]="global.currentTheme"
   [class.landscape]="global.isLandscape"
   [class.portrait]="global.isPortrait"
 >
@@ -242,6 +421,7 @@
 <!-- #projects -->
 <section
   id="projects"
+  [class]="global.currentTheme"
   [class.landscape]="global.isLandscape"
   [class.portrait]="global.isPortrait"
 >
@@ -252,6 +432,7 @@
 <!-- #jobs -->
 <section
   id="jobs"
+  [class]="global.currentTheme"
   [class.landscape]="global.isLandscape"
   [class.portrait]="global.isPortrait"
 >
@@ -262,6 +443,7 @@
 <!-- #clients -->
 <section
   id="clients"
+  [class]="global.currentTheme"
   [class.landscape]="global.isLandscape"
   [class.portrait]="global.isPortrait"
 >
@@ -312,3 +494,7 @@
   </div>
 </div>
 <!-- end #arrow-page-down -->
+
+<!-- accessibility -->
+<app-accessibility></app-accessibility>
+<!-- end accessibility -->

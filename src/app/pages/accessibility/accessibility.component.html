@@ -1,0 +1,142 @@
+<div
+  *ngIf="global.isDesktop"
+  id="accessibility-label"
+  class="show no-print"
+  [class]="global.currentTheme"
+  (mouseenter)="scripts.toggleAccessibilityOptions()"
+>
+  <i class="fa-brands fa-accessible-icon"></i>
+</div>
+<!-- end #accessibility-label -->
+
+<div
+  *ngIf="global.isDesktop"
+  id="accessibility-click-off"
+  class="no-print"
+  (click)="scripts.toggleAccessibilityOptions()"
+></div>
+<!-- end #accessibility-click-off -->
+
+<div
+  *ngIf="global.isDesktop"
+  id="accessibility-options"
+  class="no-print"
+  [class]="global.currentTheme"
+  (mouseleave)="scripts.toggleAccessibilityOptions()"
+>
+  <div class="title">
+    <h1>
+      {{
+        global.lang === 'en'
+          ? 'Accessibility Options'
+          : 'Opções de Acessibilidade'
+      }}
+    </h1>
+  </div>
+  <!-- end .title -->
+
+  <div class="content">
+    <div class="list" id="themes-list">
+      <div
+        class="item"
+        [class.active]="global.currentTheme === 'theme-original'"
+        (click)="
+          global.currentTheme !== 'theme-original'
+            ? scripts.setTheme('theme-original')
+            : ''
+        "
+      >
+        <div class="icon">
+          <i class="fa-regular fa-hand-spock"></i>
+        </div>
+        <div
+          class="text"
+          [class.font-size-1]="
+            global.accessibilityCurrentFontSize === 'font-size-1'
+          "
+          [class.font-size-2]="
+            global.accessibilityCurrentFontSize === 'font-size-2'
+          "
+          [class.font-size-3]="
+            global.accessibilityCurrentFontSize === 'font-size-3'
+          "
+        >
+          Tema Normal
+        </div>
+      </div>
+
+      <div
+        class="item"
+        [class.active]="global.currentTheme === 'theme-high-contrast'"
+        (click)="
+          global.currentTheme !== 'theme-high-contrast'
+            ? scripts.setTheme('theme-high-contrast')
+            : ''
+        "
+      >
+        <div class="icon">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+        </div>
+        <div
+          class="text"
+          [class.font-size-1]="
+            global.accessibilityCurrentFontSize === 'font-size-1'
+          "
+          [class.font-size-2]="
+            global.accessibilityCurrentFontSize === 'font-size-2'
+          "
+          [class.font-size-3]="
+            global.accessibilityCurrentFontSize === 'font-size-3'
+          "
+        >
+          Alto Contraste
+        </div>
+      </div>
+    </div>
+    <!-- end #themes-list -->
+
+    <div class="list" id="font-sizes-list">
+      <div
+        class="item"
+        [class.active]="global.accessibilityCurrentFontSize === 'font-size-1'"
+        (click)="
+          global.accessibilityCurrentFontSize !== 'font-size-1'
+            ? scripts.setAccessibilityFontSize('font-size-1')
+            : ''
+        "
+      >
+        <div class="icon">A</div>
+        <div class="text font-size-1">Normal</div>
+      </div>
+
+      <div
+        class="item"
+        [class.active]="global.accessibilityCurrentFontSize === 'font-size-2'"
+        (click)="
+          global.accessibilityCurrentFontSize !== 'font-size-2'
+            ? scripts.setAccessibilityFontSize('font-size-2')
+            : ''
+        "
+      >
+        <div class="icon">A+</div>
+        <div class="text font-size-2">Grande</div>
+      </div>
+
+      <div
+        class="item"
+        [class.active]="global.accessibilityCurrentFontSize === 'font-size-3'"
+        (click)="
+          global.accessibilityCurrentFontSize !== 'font-size-3'
+            ? scripts.setAccessibilityFontSize('font-size-3')
+            : ''
+        "
+      >
+        <div class="icon">A++</div>
+        <div class="text font-size-3">Extra Grande</div>
+      </div>
+    </div>
+    <!-- end #font-sizes-list -->
+  </div>
+  <!-- div .content -->
+</div>
+<!-- end #accessibility-options -->

@@ -1,7 +1,11 @@
 <section
   id="curriculum"
+  [class]="global.currentTheme"
   [class.landscape]="global.isLandscape"
   [class.portrait]="global.isPortrait"
+  [class.font-size-1]="global.accessibilityCurrentFontSize === 'font-size-1'"
+  [class.font-size-2]="global.accessibilityCurrentFontSize === 'font-size-2'"
+  [class.font-size-3]="global.accessibilityCurrentFontSize === 'font-size-3'"
   (window:resize)="scripts.resizedWindow()"
 >
   <app-cv></app-cv>
@@ -9,8 +13,12 @@
 
 <div
   class="options no-print"
+  [class]="global.currentTheme"
   [class.landscape]="global.isLandscape"
   [class.portrait]="global.isPortrait"
+  [class.font-size-1]="global.accessibilityCurrentFontSize === 'font-size-1'"
+  [class.font-size-2]="global.accessibilityCurrentFontSize === 'font-size-2'"
+  [class.font-size-3]="global.accessibilityCurrentFontSize === 'font-size-3'"
 >
   <div class="print" onclick="window.print()">
     <div *ngIf="global.lang === 'en'" class="hint--left" aria-label="Print">
@@ -21,6 +29,7 @@
       <i class="fas fa-print"></i>
     </div>
   </div>
+
   <div class="lang">
     <div
       *ngIf="global.lang === 'en'"
@@ -41,3 +50,7 @@
     </div>
   </div>
 </div>
+
+<!-- accessibility -->
+<app-accessibility></app-accessibility>
+<!-- end accessibility -->

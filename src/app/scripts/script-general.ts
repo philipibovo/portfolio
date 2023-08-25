@@ -8,6 +8,8 @@ import { ArrowsModel } from '../models/arrows-model';
 
 @Injectable()
 export class ScriptGeneral {
+  public arrows: ArrowsModel = new ArrowsModel();
+
   constructor(public global: Global) {}
 
   start = async (windowHeight: number, offSetTop: number) => {
@@ -126,6 +128,8 @@ export class ScriptGeneral {
       .querySelector('#about .content > .social')
       ?.classList.remove('vFixed2');
 
+    localStorage.setItem('pbSectionAtive', `${sectionNumber}`);
+
     switch (sectionNumber) {
       case 0:
         document.querySelector(`#about`)?.classList.add('active');
@@ -141,7 +145,17 @@ export class ScriptGeneral {
         document.querySelector(`#tools`)?.classList.add('active');
         this.global.arrowUpTheme = 'light';
         this.global.arrowDownTheme = 'light';
-        this.global.socialIconTheme = 'dark';
+
+        switch (this.global.currentTheme) {
+          case `theme-high-contrast`:
+            this.global.socialIconTheme = 'light';
+            break;
+
+          default:
+            this.global.socialIconTheme = 'dark';
+            break;
+        }
+
         this.global.isFirstSection = false;
         this.global.isLastSection = false;
         diffZero = true;
@@ -156,7 +170,17 @@ export class ScriptGeneral {
         document.querySelector(`#projects`)?.classList.add('active');
         this.global.arrowUpTheme = 'light';
         this.global.arrowDownTheme = 'light';
-        this.global.socialIconTheme = 'dark';
+
+        switch (this.global.currentTheme) {
+          case `theme-high-contrast`:
+            this.global.socialIconTheme = 'light';
+            break;
+
+          default:
+            this.global.socialIconTheme = 'dark';
+            break;
+        }
+
         this.global.isFirstSection = false;
         this.global.isLastSection = false;
         diffZero = true;
@@ -179,6 +203,21 @@ export class ScriptGeneral {
         document
           .querySelector('#about .content > .social')
           ?.classList.add('vFixed2');
+
+        const wrapElement = document.querySelector('#list-jobs') as HTMLElement;
+        const qtdItems = document.querySelectorAll('#list-jobs > .item').length;
+        const sizeItem =
+          document.querySelector('#list-jobs > .item')!.scrollWidth;
+        const sizeMarginItem = 20;
+
+        if (
+          qtdItems * (sizeItem + sizeMarginItem * 2) >
+          wrapElement.getBoundingClientRect().width
+        ) {
+          wrapElement.style.justifyContent = 'flex-start';
+        } else {
+          wrapElement.style.justifyContent = 'center';
+        }
 
         break;
 
@@ -327,4 +366,45 @@ export class ScriptGeneral {
     }
   };
   // end setScrollBy = (elementId: string, direction: string)
+
+  toggleAccessibilityOptions = () => {
+    const elClickOff = document.querySelector(
+      `#accessibility-click-off`
+    ) as HTMLElement;
+
+    const elLabel = document.querySelector(
+      `#accessibility-label`
+    ) as HTMLElement;
+
+    const elOptions = document.querySelector(
+      `#accessibility-options`
+    ) as HTMLElement;
+
+    elLabel.classList.toggle(`show`);
+    elClickOff.classList.toggle(`show`);
+    elOptions.classList.toggle(`show`);
+  };
+  // end toggleAccessibilityOptions = ()
+
+  setTheme = (theme: string) => {
+    const bodyEl = document.querySelector(`body`) as HTMLElement;
+
+    bodyEl.classList.remove(`theme-high-contrast`);
+    bodyEl.classList.remove(`theme-original`);
+
+    bodyEl.classList.add(theme);
+
+    this.global.currentTheme = theme;
+    localStorage.setItem('pbTheme', theme);
+
+    console.log(localStorage.getItem('pbSectionAtive'));
+    this.activeSection(parseInt(localStorage.getItem('pbSectionAtive')!));
+  };
+  // end setLang = (lang: string)
+
+  setAccessibilityFontSize = (theme: string) => {
+    this.global.accessibilityCurrentFontSize = theme;
+    localStorage.setItem('pbTheme', theme);
+  };
+  // end setLang = (lang: string)
 }

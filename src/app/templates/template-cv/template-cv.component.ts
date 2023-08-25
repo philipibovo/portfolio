@@ -16,5 +16,6 @@ export class TemplateCvComponent implements OnInit {
   ngOnInit(): void {
     this.scripts.getLang();
     this.scripts.resizedWindow();
+    this.scripts.setTheme(`theme-original`);
   }
 }

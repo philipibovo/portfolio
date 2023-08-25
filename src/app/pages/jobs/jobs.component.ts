@@ -23,6 +23,15 @@ export class JobsComponent implements OnInit {
   constructor(public global: Global, public scripts: ScriptGeneral) {}
 
   ngOnInit(): void {
+    if (this.global.isDesktop) {
+      setTimeout(() => {
+        this.showArrows();
+      }, 500);
+    }
+  }
+  // end ngOnInit(): void
+
+  showArrows = () => {
     const wrapElement = document.querySelector('#list-jobs') as HTMLElement;
     const qtdItems = document.querySelectorAll('#list-jobs > .item').length;
     const sizeItem = document.querySelector('#list-jobs > .item')!.scrollWidth;
@@ -32,18 +41,18 @@ export class JobsComponent implements OnInit {
       qtdItems * (sizeItem + sizeMarginItem * 2) >
       wrapElement.getBoundingClientRect().width
     ) {
-      wrapElement.style.justifyContent = 'flex-start';
       this.arrows.show = true;
       this.arrows.left = false;
       this.arrows.right = true;
+      wrapElement.style.justifyContent = 'flex-start';
     } else {
-      wrapElement.style.justifyContent = 'center';
       this.arrows.show = false;
       this.arrows.left = false;
       this.arrows.right = false;
+      wrapElement.style.justifyContent = 'center';
     }
-  }
-  // end ngOnInit(): void
+  };
+  // end showArrows = ()
 
   scrollHorizontalByClick = (event: Event, direction: string) => {
     let element = event.target as HTMLElement;
@@ -62,7 +71,6 @@ export class JobsComponent implements OnInit {
           .setScrollBy('list-jobs', 'right', 300, 45)
           .then((result) => {
             this.arrows = result;
-            console.log(result);
           });
       }
     }

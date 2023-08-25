@@ -1,10 +1,10 @@
 <div class="content">
-  <div class="title">
+  <h1 class="title">
     <div>J</div>
     <div>o</div>
     <div>b</div>
     <div>s</div>
-  </div>
+  </h1>
 
   <div class="main">
     <div class="list" id="list-jobs">
@@ -17,7 +17,20 @@
             />
           </div>
 
-          <div class="text">Limoney</div>
+          <div
+            class="text"
+            [class.font-size-1]="
+              global.accessibilityCurrentFontSize === 'font-size-1'
+            "
+            [class.font-size-2]="
+              global.accessibilityCurrentFontSize === 'font-size-2'
+            "
+            [class.font-size-3]="
+              global.accessibilityCurrentFontSize === 'font-size-3'
+            "
+          >
+            Limoney
+          </div>
         </div>
       </div>
 
@@ -30,16 +43,25 @@
             />
           </div>
 
-          <div class="text">Sistema Pamcard</div>
+          <div
+            class="text"
+            [class.font-size-1]="
+              global.accessibilityCurrentFontSize === 'font-size-1'
+            "
+            [class.font-size-2]="
+              global.accessibilityCurrentFontSize === 'font-size-2'
+            "
+            [class.font-size-3]="
+              global.accessibilityCurrentFontSize === 'font-size-3'
+            "
+          >
+            Sistema Pamcard
+          </div>
         </div>
       </div>
 
-      <div class="item">
-        <div
-          *ngIf="global.isDesktop"
-          class="wrap"
-          (click)="showHideJobGallery('job-pamcard-monitor')"
-        >
+      <div *ngIf="global.isDesktop" class="item">
+        <div class="wrap" (click)="showHideJobGallery('job-pamcard-monitor')">
           <div class="image">
             <img
               src="../../../assets/jobs/pamcardMonitor/cover.png"
@@ -47,7 +69,20 @@
             />
           </div>
 
-          <div class="text">Pamcard - Monitor</div>
+          <div
+            class="text"
+            [class.font-size-1]="
+              global.accessibilityCurrentFontSize === 'font-size-1'
+            "
+            [class.font-size-2]="
+              global.accessibilityCurrentFontSize === 'font-size-2'
+            "
+            [class.font-size-3]="
+              global.accessibilityCurrentFontSize === 'font-size-3'
+            "
+          >
+            Pamcard - Monitor
+          </div>
         </div>
       </div>
 
@@ -60,7 +95,20 @@
             />
           </div>
 
-          <div class="text">Fisiopole Studio</div>
+          <div
+            class="text"
+            [class.font-size-1]="
+              global.accessibilityCurrentFontSize === 'font-size-1'
+            "
+            [class.font-size-2]="
+              global.accessibilityCurrentFontSize === 'font-size-2'
+            "
+            [class.font-size-3]="
+              global.accessibilityCurrentFontSize === 'font-size-3'
+            "
+          >
+            Fisiopole Studio
+          </div>
         </div>
       </div>
 
@@ -73,16 +121,25 @@
             />
           </div>
 
-          <div class="text">Wedding</div>
+          <div
+            class="text"
+            [class.font-size-1]="
+              global.accessibilityCurrentFontSize === 'font-size-1'
+            "
+            [class.font-size-2]="
+              global.accessibilityCurrentFontSize === 'font-size-2'
+            "
+            [class.font-size-3]="
+              global.accessibilityCurrentFontSize === 'font-size-3'
+            "
+          >
+            Wedding
+          </div>
         </div>
       </div>
 
-      <div class="item">
-        <div
-          *ngIf="global.isDesktop"
-          class="wrap"
-          (click)="showHideJobGallery('job-pmsv')"
-        >
+      <div *ngIf="global.isDesktop" class="item">
+        <div class="wrap" (click)="showHideJobGallery('job-pmsv')">
           <div class="image">
             <img
               src="../../../assets/jobs/pmsv/cover.png"
@@ -90,16 +147,25 @@
             />
           </div>
 
-          <div class="text">Prefeitura São Vicente</div>
+          <div
+            class="text"
+            [class.font-size-1]="
+              global.accessibilityCurrentFontSize === 'font-size-1'
+            "
+            [class.font-size-2]="
+              global.accessibilityCurrentFontSize === 'font-size-2'
+            "
+            [class.font-size-3]="
+              global.accessibilityCurrentFontSize === 'font-size-3'
+            "
+          >
+            Prefeitura São Vicente
+          </div>
         </div>
       </div>
 
-      <div class="item">
-        <div
-          *ngIf="global.isDesktop"
-          class="wrap"
-          (click)="showHideJobGallery('job-interface-eng')"
-        >
+      <div *ngIf="global.isDesktop" class="item">
+        <div class="wrap" (click)="showHideJobGallery('job-interface-eng')">
           <div class="image">
             <img
               src="../../../assets/jobs/interfaceEng/cover.png"
@@ -107,7 +173,20 @@
             />
           </div>
 
-          <div class="text">Interface Engenharia</div>
+          <div
+            class="text"
+            [class.font-size-1]="
+              global.accessibilityCurrentFontSize === 'font-size-1'
+            "
+            [class.font-size-2]="
+              global.accessibilityCurrentFontSize === 'font-size-2'
+            "
+            [class.font-size-3]="
+              global.accessibilityCurrentFontSize === 'font-size-3'
+            "
+          >
+            Interface Engenharia
+          </div>
         </div>
       </div>
     </div>
@@ -1001,16 +1080,6 @@
   <div class="top">
     <div class="title">
       <div class="text">Wedding</div>
-
-      <div class="link">
-        <a
-          href="https://philipi.bovo.me/jobs/wedding/index.html"
-          target="_blank"
-        >
-          <div *ngIf="global.lang === 'en'">(Visit HTML Version)</div>
-          <div *ngIf="global.lang === 'pt'">(Veja a Versão HTML)</div>
-        </a>
-      </div>
     </div>
 
     <div class="close" (click)="showHideJobGallery('job-wedding')">
@@ -1130,17 +1199,7 @@
 <div class="gallery" id="job-pmsv">
   <div class="top">
     <div class="title">
-      <div class="text">Wedding</div>
-
-      <div class="link">
-        <a
-          href="https://philipi.bovo.me/jobs/pmsv/institucional/index.html"
-          target="_blank"
-        >
-          <div *ngIf="global.lang === 'en'">(Visit HTML Version)</div>
-          <div *ngIf="global.lang === 'pt'">(Veja a Versão HTML)</div>
-        </a>
-      </div>
+      <div class="text">Pref. São Vicente</div>
     </div>
 
     <div class="close" (click)="showHideJobGallery('job-pmsv')">
@@ -1279,16 +1338,6 @@
   <div class="top">
     <div class="title">
       <div class="text">Interface Engenharia</div>
-
-      <div class="link">
-        <a
-          href="https://philipi.bovo.me/jobs/interfaceEng/consultaUsuario.html"
-          target="_blank"
-        >
-          <div *ngIf="global.lang === 'en'">(Visit HTML Version)</div>
-          <div *ngIf="global.lang === 'pt'">(Veja a Versão HTML)</div>
-        </a>
-      </div>
     </div>
 
     <div class="close" (click)="showHideJobGallery('job-interface-eng')">
