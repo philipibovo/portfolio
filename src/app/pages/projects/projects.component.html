@@ -5,25 +5,26 @@
   </h1>
 
   <div class="main">
-    <div class="item" id="project-limoney">
-      <div *ngIf="global.isDesktop" class="image">
-        <img
-          src="../../../assets/projects/limoney.png"
-          alt="Logotipo Limoney"
-        />
+    <div
+      *ngFor="let project of projects"
+      [id]="project.id"
+      class="item"
+      [class.hideItem]="project.hideInMobile"
+      (mouseenter)="project.showDetails = true"
+      (mouseleave)="project.showDetails = false"
+    >
+      <div class="logo" (click)="project.showDetails = true">
+        <img alt="Logo Limoney" loading="lazy" [src]="project.imgURL" />
       </div>
 
-      <div *ngIf="global.isMobile" class="image">
-        <img
-          src="../../../assets/projects/limoney-transparent.png"
-          alt="Logo Limoney"
-        />
-      </div>
+      <div
+        class="wrap"
+        [class.show]="project.showDetails"
+        (click)="hideItemDetail($event, project.id)"
+      >
+        <h2 class="name">{{ project.name }}</h2>
 
-      <div class="wrap">
-        <div class="name">Limoney</div>
-
-        <div class="text">
+        <div class="message">
           <div
             [class.font-size-1]="
               global.accessibilityCurrentFontSize === 'font-size-1'
@@ -35,23 +36,17 @@
               global.accessibilityCurrentFontSize === 'font-size-3'
             "
           >
-            {{
-              global.lang === 'en'
-                ? 'Personal financial management assistance app.'
-                : 'App de auxílio de gestão financeira pessoal.'
-            }}
+            {{ global.lang === 'en' ? project.descEN : project.descPT }}
           </div>
         </div>
 
         <div class="link">
           <a
-            href="https://limoney.app"
             target="_blank"
             [attr.aria-label]="
-              global.lang === 'en'
-                ? 'Visit Limoney'
-                : 'Saiba mais sobre Limoney'
+              global.lang === 'en' ? project.linkLabelEN : project.linkLabelPT
             "
+            [href]="project.linkURL"
           >
             <div
               aria-hidden="true"
@@ -66,223 +61,15 @@
                 global.accessibilityCurrentFontSize === 'font-size-3'
               "
             >
-              {{ global.lang === 'en' ? 'Visit' : 'Saiba Mais' }}
+              {{
+                global.lang === 'en' ? project.linkTextEN : project.linkTextPT
+              }}
             </div>
           </a>
         </div>
       </div>
       <!-- end .wrap -->
     </div>
-    <!-- end #project-limoney -->
-
-    <div class="item" id="project-pompeijs">
-      <div *ngIf="global.isDesktop" class="image">
-        <img
-          src="../../../assets/projects/pompeijs.png"
-          alt="Logotipo Pompei JS"
-        />
-      </div>
-
-      <div *ngIf="global.isMobile" class="image">
-        <img
-          src="../../../assets/projects/pompeijs-transparent.png"
-          alt="Logo PompeiJS"
-        />
-      </div>
-
-      <div class="wrap">
-        <div class="name">pompei.js</div>
-
-        <div class="text">
-          <div
-            [class.font-size-1]="
-              global.accessibilityCurrentFontSize === 'font-size-1'
-            "
-            [class.font-size-2]="
-              global.accessibilityCurrentFontSize === 'font-size-2'
-            "
-            [class.font-size-3]="
-              global.accessibilityCurrentFontSize === 'font-size-3'
-            "
-          >
-            {{
-              global.lang === 'en'
-                ? 'CSS / JQuery library for creating responsive layouts based on rows and columns.'
-                : 'Biblioteca CSS/JQuery para criar layouts responsívos baseados em linhas e colunas.'
-            }}
-          </div>
-        </div>
-
-        <div class="link">
-          <a
-            href="https://philipi.bovo.me/pompeijs/"
-            target="_blank"
-            [attr.aria-label]="
-              global.lang === 'en'
-                ? 'Visit Pompei JS'
-                : 'Saiba mais sobre Pompei JS'
-            "
-          >
-            <div
-              aria-hidden="true"
-              class="link-style"
-              [class.font-size-1]="
-                global.accessibilityCurrentFontSize === 'font-size-1'
-              "
-              [class.font-size-2]="
-                global.accessibilityCurrentFontSize === 'font-size-2'
-              "
-              [class.font-size-3]="
-                global.accessibilityCurrentFontSize === 'font-size-3'
-              "
-            >
-              {{ global.lang === 'en' ? 'Visit' : 'Saiba mais' }}
-            </div>
-          </a>
-        </div>
-      </div>
-      <!-- end .wrap -->
-    </div>
-    <!-- end #project-pompeijs -->
-
-    <div class="item" id="project-tivolijs">
-      <div *ngIf="global.isDesktop" class="image">
-        <img
-          src="../../../assets/projects/tivolijs.png"
-          alt="Logotipo Tivoli JS"
-        />
-      </div>
-
-      <div *ngIf="global.isMobile" class="image">
-        <img
-          src="../../../assets/projects/tivolijs-transparent.png"
-          alt="Logo TivoliJS"
-        />
-      </div>
-
-      <div class="wrap">
-        <div class="name">tivoli.js</div>
-
-        <div class="text">
-          <div
-            [class.font-size-1]="
-              global.accessibilityCurrentFontSize === 'font-size-1'
-            "
-            [class.font-size-2]="
-              global.accessibilityCurrentFontSize === 'font-size-2'
-            "
-            [class.font-size-3]="
-              global.accessibilityCurrentFontSize === 'font-size-3'
-            "
-          >
-            {{
-              global.lang === 'en'
-                ? 'CSS / JQuery library to facilitate the use of forms on pages HTML.'
-                : 'Biblioteca CSS/JQuery para facilitar o uso de formulários em páginas HTML.'
-            }}
-          </div>
-        </div>
-
-        <div class="link">
-          <a
-            href="https://philipi.bovo.me/tivolijs/"
-            target="_blank"
-            [attr.aria-label]="
-              global.lang === 'en'
-                ? 'Visit Tivoli JS'
-                : 'Saiba mais sobre Tivoli JS'
-            "
-          >
-            <div
-              aria-hidden="true"
-              class="link-style"
-              [class.font-size-1]="
-                global.accessibilityCurrentFontSize === 'font-size-1'
-              "
-              [class.font-size-2]="
-                global.accessibilityCurrentFontSize === 'font-size-2'
-              "
-              [class.font-size-3]="
-                global.accessibilityCurrentFontSize === 'font-size-3'
-              "
-            >
-              {{ global.lang === 'en' ? 'Visit' : 'Saiba mais' }}
-            </div>
-          </a>
-        </div>
-      </div>
-      <!-- end .wrap -->
-    </div>
-    <!-- end #project-tivolijs -->
-
-    <div class="item" id="project-navonajs">
-      <div *ngIf="global.isDesktop" class="image">
-        <img
-          src="../../../assets/projects/navonajs.png"
-          alt="Logotipo Navona JS"
-        />
-      </div>
-
-      <div *ngIf="global.isMobile" class="image">
-        <img
-          src="../../../assets/projects/navonajs-transparent.png"
-          alt="Logo NavonaJS"
-        />
-      </div>
-
-      <div class="wrap">
-        <div class="name">navona.js</div>
-
-        <div class="text">
-          <div
-            [class.font-size-1]="
-              global.accessibilityCurrentFontSize === 'font-size-1'
-            "
-            [class.font-size-2]="
-              global.accessibilityCurrentFontSize === 'font-size-2'
-            "
-            [class.font-size-3]="
-              global.accessibilityCurrentFontSize === 'font-size-3'
-            "
-          >
-            {{
-              global.lang === 'en'
-                ? 'CSS / JQuery photo gallery elegant and easy to use.'
-                : 'Galeria de fotos CSS/JQuery elegante e fácil de usar.'
-            }}
-          </div>
-        </div>
-
-        <div class="link">
-          <a
-            href="https://philipi.bovo.me/navonajs/"
-            target="_blank"
-            [attr.aria-label]="
-              global.lang === 'en'
-                ? 'Visit Navona JS'
-                : 'Saiba mais sobre Navona JS'
-            "
-          >
-            <div
-              aria-hidden="true"
-              class="link-style"
-              [class.font-size-1]="
-                global.accessibilityCurrentFontSize === 'font-size-1'
-              "
-              [class.font-size-2]="
-                global.accessibilityCurrentFontSize === 'font-size-2'
-              "
-              [class.font-size-3]="
-                global.accessibilityCurrentFontSize === 'font-size-3'
-              "
-            >
-              {{ global.lang === 'en' ? 'Visit' : 'Saiba mais' }}
-            </div>
-          </a>
-        </div>
-      </div>
-      <!-- end .wrap -->
-    </div>
-    <!-- end #project-navonajs -->
+    <!-- end .item -->
   </div>
 </div>

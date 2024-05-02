@@ -24,7 +24,7 @@ section {
   }
   // #about .content
   .content {
-    height: calc(100% - 30px);
+    height: calc(100vh - 30px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,12 +53,16 @@ section {
     // #about .content > .social
     > .social {
       z-index: 99;
-      // #about.portrait .content > .social > .social-icon
+      // #about .content > .social > .social-icon
       > .social-icon {
         padding: 10px;
         font-size: 1.45rem;
         color: #f7f7f7;
-        // #about.portrait .content > .social > .social-icon.light > a
+        // #about .content > .social > .social-icon#icon-npm
+        &#icon-npm {
+          font-size: 2.2rem;
+        }
+        // #about .content > .social > .social-icon.light > a
         > a,
         a:active,
         a:visited {
@@ -66,9 +70,9 @@ section {
           text-decoration: none;
         }
       }
-      // #about.portrait .content > .social > #icon-lang
+      // #about .content > .social > #icon-lang
       > #icon-lang {
-        // #about.portrait .content > .social > #icon-lang > img
+        // #about .content > .social > #icon-lang > img
         > img {
           width: 23px;
           filter: grayscale(100%);
@@ -337,28 +341,30 @@ section {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: flex-start;
-        // #projects .content > .main > .item > .image
-        > .image {
-          // #projects .content > .main > .item > .image > img
-          > img {
-            width: 70px;
+        justify-content: center;
+        gap: 10px;
+        > .logo {
+          img {
+            width: 100px;
           }
         }
-        // #projects .content > .main > .item > .wrap
         > .wrap {
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          // #projects .content > .main > .item > .wrap > div
-          > div {
+          > .name {
             text-align: center;
-            &.name {
-              text-decoration: underline;
-              font-weight: bold;
-            }
           }
+          > .message {
+            text-align: center;
+          }
+        }
+        &.hideItem {
+          position: fixed;
+          top: -100vh;
+          left: -100vw;
+          z-index: -9999;
         }
       }
     }
@@ -373,19 +379,11 @@ section {
       }
       // #projects.portrait .content > .main
       > .main {
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: center;
-        // #projects.portrait .content > .main > .item
+        padding-top: 10px;
+        // #projects.portrait .content > .main  > .item
         > .item {
+          margin: 10px;
           padding: 5px;
-          margin: 10px 0;
-          // #projects.portrait .content > .main > .item > .image
-          > .image {
-            margin-right: 5px;
-          }
         }
       }
     }
@@ -397,25 +395,19 @@ section {
       padding-right: 55px;
       // #projects.landscape .content > .main
       > .main {
+        margin: 10px 0 0 10px;
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: stretch;
         justify-content: flex-start;
         flex-wrap: wrap;
-        // #projects.landscape .content > .main > .item
+        gap: 10px;
+        row-gap: 0;
+        // #projects.landscape .content > .main  > .item
         > .item {
-          margin: 10px;
+          width: calc(50% - 10px);
+          height: calc(50% - 10px);
           padding: 5px;
-          width: calc(50% - 20px);
-          height: calc(50% - 20px);
-          // #projects.landscape .content > .main > .item > .image
-          > .image {
-            margin-left: 5px;
-          }
-          // #projects.landscape .content > .main > .item > .wrap
-          > .wrap {
-            font-size: 0.9rem;
-          }
         }
       }
     }
@@ -668,8 +660,8 @@ section {
         justify-content: center;
         z-index: -5;
         transition: all 300ms;
-        // #jobs .gallery > .main > .item.show
-        &.show {
+        // #jobs .gallery > .main > .item.active
+        &.active {
           opacity: 1;
           z-index: 998;
           transition: all 300ms;
@@ -734,6 +726,10 @@ section {
           scroll-snap-align: start;
           cursor: pointer;
           background: #000000;
+          // #jobs .gallery > .bottom > .list > .item.active
+          &.active {
+            border: 2px solid #0090ce;
+          }
           // #jobs .gallery > .bottom > .list > .item > img
           > img {
             width: 100%;

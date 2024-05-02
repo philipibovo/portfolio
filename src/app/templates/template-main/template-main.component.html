@@ -61,6 +61,7 @@
       <!-- #icon-linkedin -->
       <div
         *ngIf="global.isDesktop"
+        aria-label="Linkdin"
         class="social-icon hint--bottom"
         id="icon-linkedin"
         role="menuitem"
@@ -113,6 +114,7 @@
       <!-- #icon-github -->
       <div
         *ngIf="global.isDesktop"
+        aria-label="Github"
         class="social-icon hint--bottom"
         id="icon-github"
         role="menuitem"
@@ -162,6 +164,59 @@
       </div>
       <!-- end #icon-github -->
 
+      <!-- #icon-npm -->
+      <div
+        *ngIf="global.isDesktop"
+        aria-label="NPM"
+        class="social-icon hint--bottom"
+        id="icon-npm"
+        role="menuitem"
+        [class]="global.socialIconTheme"
+        [class.font-size-1]="
+          global.accessibilityCurrentFontSize === 'font-size-1'
+        "
+        [class.font-size-2]="
+          global.accessibilityCurrentFontSize === 'font-size-2'
+        "
+        [class.font-size-3]="
+          global.accessibilityCurrentFontSize === 'font-size-3'
+        "
+      >
+        <a
+          href="https://www.npmjs.com/~philipibovo"
+          target="_blank"
+          aria-label="NPM Philipi Bovo"
+        >
+          <i class="fab fa-npm"></i>
+        </a>
+      </div>
+
+      <div
+        *ngIf="global.isMobile"
+        class="social-icon"
+        id="icon-npm"
+        role="menuitem"
+        [class]="global.socialIconTheme"
+        [class.font-size-1]="
+          global.accessibilityCurrentFontSize === 'font-size-1'
+        "
+        [class.font-size-2]="
+          global.accessibilityCurrentFontSize === 'font-size-2'
+        "
+        [class.font-size-3]="
+          global.accessibilityCurrentFontSize === 'font-size-3'
+        "
+      >
+        <a
+          href="https://www.npmjs.com/~philipibovo"
+          target="_blank"
+          aria-label="NPM Philipi Bovo"
+        >
+          <i class="fab fa-npm"></i>
+        </a>
+      </div>
+      <!-- end #icon-npm -->
+
       <!-- #icon-cv -->
       <div
         *ngIf="global.isDesktop"
@@ -208,30 +263,9 @@
 
       <!-- #icon-lang -->
       <div
-        *ngIf="global.isDesktop && global.lang === 'en'"
-        aria-label="Versão em Protuguês"
-        id="icon-lang"
-        class="social-icon hint--left"
-        [class]="global.socialIconTheme"
-        [class.font-size-1]="
-          global.accessibilityCurrentFontSize === 'font-size-1'
-        "
-        [class.font-size-2]="
-          global.accessibilityCurrentFontSize === 'font-size-2'
-        "
-        [class.font-size-3]="
-          global.accessibilityCurrentFontSize === 'font-size-3'
-        "
-        (click)="scripts.setLang('pt')"
-      >
-        <img src="../assets/icons/brazil-flag.png" alt="" />
-      </div>
-
-      <div
         *ngIf="global.isMobile && global.lang === 'en'"
         class="social-icon"
         id="icon-lang"
-        [class]="global.socialIconTheme"
         [class.font-size-1]="
           global.accessibilityCurrentFontSize === 'font-size-1'
         "
@@ -244,33 +278,12 @@
         (click)="scripts.setLang('pt')"
       >
         <img src="../assets/icons/brazil-flag.png" alt="" />
-      </div>
-
-      <div
-        *ngIf="global.isDesktop && global.lang === 'pt'"
-        aria-label="English Version"
-        class="social-icon hint--left"
-        id="icon-lang"
-        [class]="global.socialIconTheme"
-        [class.font-size-1]="
-          global.accessibilityCurrentFontSize === 'font-size-1'
-        "
-        [class.font-size-2]="
-          global.accessibilityCurrentFontSize === 'font-size-2'
-        "
-        [class.font-size-3]="
-          global.accessibilityCurrentFontSize === 'font-size-3'
-        "
-        (click)="scripts.setLang('en')"
-      >
-        <img src="../assets/icons/uk-flag.png" alt="" />
       </div>
 
       <div
         *ngIf="global.isMobile && global.lang === 'pt'"
         class="social-icon"
         id="icon-lang"
-        [class]="global.socialIconTheme"
         [class.font-size-1]="
           global.accessibilityCurrentFontSize === 'font-size-1'
         "
@@ -494,6 +507,36 @@
   </div>
 </div>
 <!-- end #arrow-page-down -->
+
+<div id="lang-options">
+  <!-- #icon-lang -->
+  <div
+    *ngIf="global.isDesktop && global.lang === 'en'"
+    aria-label="Versão em Protuguês"
+    class="lang-icon hint--above"
+    id="icon-lang"
+    [class.font-size-1]="global.accessibilityCurrentFontSize === 'font-size-1'"
+    [class.font-size-2]="global.accessibilityCurrentFontSize === 'font-size-2'"
+    [class.font-size-3]="global.accessibilityCurrentFontSize === 'font-size-3'"
+    (click)="scripts.setLang('pt')"
+  >
+    <img src="../assets/icons/brazil-flag.png" alt="" />
+  </div>
+
+  <div
+    *ngIf="global.isDesktop && global.lang === 'pt'"
+    aria-label="English Version"
+    class="lang-icon hint--above"
+    id="icon-lang"
+    [class.font-size-1]="global.accessibilityCurrentFontSize === 'font-size-1'"
+    [class.font-size-2]="global.accessibilityCurrentFontSize === 'font-size-2'"
+    [class.font-size-3]="global.accessibilityCurrentFontSize === 'font-size-3'"
+    (click)="scripts.setLang('en')"
+  >
+    <img src="../assets/icons/uk-flag.png" alt="" />
+  </div>
+  <!-- end #icon-lang -->
+</div>
 
 <!-- accessibility -->
 <app-accessibility></app-accessibility>

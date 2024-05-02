@@ -206,18 +206,20 @@ export class ScriptGeneral {
 
         const wrapElement = document.querySelector('#list-jobs') as HTMLElement;
         const qtdItems = document.querySelectorAll('#list-jobs > .item').length;
-        const sizeItem =
-          document.querySelector('#list-jobs > .item')!.scrollWidth;
-        const sizeMarginItem = 20;
+        setTimeout(() => {
+          const sizeItem =
+            document.querySelector('#list-jobs > .item')!.scrollWidth;
+          const sizeMarginItem = 20;
 
-        if (
-          qtdItems * (sizeItem + sizeMarginItem * 2) >
-          wrapElement.getBoundingClientRect().width
-        ) {
-          wrapElement.style.justifyContent = 'flex-start';
-        } else {
-          wrapElement.style.justifyContent = 'center';
-        }
+          if (
+            qtdItems * (sizeItem + sizeMarginItem * 2) >
+            wrapElement.getBoundingClientRect().width
+          ) {
+            wrapElement.style.justifyContent = 'flex-start';
+          } else {
+            wrapElement.style.justifyContent = 'center';
+          }
+        }, 10);
 
         break;
 
@@ -397,7 +399,6 @@ export class ScriptGeneral {
     this.global.currentTheme = theme;
     localStorage.setItem('pbTheme', theme);
 
-    console.log(localStorage.getItem('pbSectionAtive'));
     this.activeSection(parseInt(localStorage.getItem('pbSectionAtive')!));
   };
   // end setLang = (lang: string)

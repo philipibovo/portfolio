@@ -475,6 +475,61 @@ section {
 }
 // end Arrows Navigation
 
+// Lang Options
+#lang-options {
+  position: fixed;
+  bottom: 10px;
+  left: 15px;
+  z-index: 200;
+  // #lang-options > .lang-icon
+  > .lang-icon {
+    color: #f7f7f7;
+    cursor: pointer;
+    transition: all 300ms;
+    // #lang-options > .lang-icon.font-size-1
+    &.font-size-1 {
+      // #lang-options > .lang-icon.font-size-1 > img
+      > img {
+        width: 30px;
+      }
+    }
+    // #lang-options > .lang-icon.font-size-2
+    &.font-size-2 {
+      // #lang-options > .lang-icon.font-size-2 > img
+      > img {
+        width: 40px;
+      }
+    }
+    // #lang-options > .lang-icon.font-size-3
+    &.font-size-3 {
+      // #lang-options > .lang-icon.font-size-3 > img
+      > img {
+        width: 50px;
+      }
+    }
+    // #lang-options > .lang-icon:hover
+    &:hover {
+      transform: scale(1.5);
+      transition: all 300ms;
+    }
+    > img {
+      filter: grayscale(100%);
+      transition: all 300ms;
+    }
+    // #lang-options > .lang-icon.light > a
+    > a {
+      &:link,
+      &:active,
+      &:visited,
+      &:hover {
+        color: #f7f7f7 !important;
+        text-decoration: none;
+      }
+    }
+  }
+}
+// end Lang Options
+
 #about {
   // #about .email
   .email {
@@ -571,6 +626,19 @@ section {
         &:hover {
           transform: scale(1.5);
           transition: all 300ms;
+        }
+        &#icon-npm {
+          &.font-size-1 {
+            font-size: 2.2rem;
+          }
+          // #about .content > .social > .social-icon#icon-npm.font-size-2
+          &.font-size-2 {
+            font-size: 2.7rem;
+          }
+          // #about .content > .social > .social-icon#icon-npm.font-size-3
+          &.font-size-3 {
+            font-size: 3.2rem;
+          }
         }
         // #about .content > .social > .social-icon.light
         &.light {
@@ -1066,121 +1134,55 @@ section {
     > .main {
       opacity: 1;
       width: 100%;
-      height: 240px;
-      padding-right: 60px;
+      height: 75vh;
+      padding: 20px 90px;
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
       transition: all 500ms;
-      // #projects .content > .item
+      // #projects .content > > .item
       > .item {
-        position: relative;
-        width: 100%;
-        margin: 0 25px;
-        width: 25%;
-        height: 200px;
-        padding: 20px 0 50px 0;
+        width: 250px;
+        min-height: 250px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-end;
-        transition: all 500ms;
-        // #projects .content > .item > .image
-        > .image {
-          position: absolute;
-          top: 50%;
-          transform: translate(0, -50%);
-          width: 100%;
-          text-align: center;
-          z-index: 5;
-          transition: all 500ms;
-          // #projects .content > .item > .image > img
+        justify-content: center;
+        // #projects .content > .item > .logo
+        > .logo {
+          // #projects .content > .item-container > .item > .logo > img
           > img {
-            transition: all 500ms;
+            // width: 150px;
+            width: 150px;
+            transition: all 150ms;
           }
+          z-index: 9;
         }
         // #projects .content > .item > .wrap
         > .wrap {
           width: 100%;
-          height: 70%;
           opacity: 0;
           display: flex;
           flex-direction: column;
+          justify-content: center;
           align-items: center;
-          justify-content: space-between;
-          transition: all 500ms;
-          // #projects .content > .item > .wrap > .name
-          > .name {
-            font-weight: 100;
-            font-size: 2rem;
-          }
-          // #projects .content > .item > .wrap > .text
-          > .text {
-            padding: 0 15px;
+          padding: 50px 20px 10px 20px;
+          margin-top: -150px;
+          border-radius: 15px;
+          transition: all 300ms;
+          z-index: 8;
+          > .message {
             text-align: center;
           }
-          // #projects .content > .item > .wrap > .link
-          > .link {
-            // #projects .content > .item > .wrap > .link a
-            a,
-            a:active,
-            a:visited {
-              color: #333333;
-              text-decoration: none;
-            }
-          }
         }
-        // #projects .content > .item:hover
         &:hover {
-          height: 300px;
-          border-radius: 5px;
-          transition: all 500ms;
-          // #projects .content > .item:hover > .image
-          > .image {
-            top: -75px;
-            transform: translate(0, 0);
-            transition: all 500ms;
-            // #projects .content > .item:hover > .image > img
-            > img {
-              transition: all 500ms;
-            }
-          }
           > .wrap {
             opacity: 1;
-            transition: all 500ms;
-          }
-        }
-        // #projects .content > .item#project-limoney
-        &#project-limoney {
-          > .image {
-            > img {
-              width: 150px;
-            }
-          }
-        }
-        // #projects .content > .item#project-pompeijs
-        &#project-pompeijs {
-          > .image {
-            > img {
-              width: 150px;
-            }
-          }
-        }
-        // #projects .content > .item#project-tivolijs
-        &#project-tivolijs {
-          > .image {
-            > img {
-              width: 150px;
-            }
-          }
-        }
-        // #projects .content > .item#project-navonajs
-        &#project-navonajs {
-          > .image {
-            > img {
-              width: 150px;
-            }
+            margin-top: -50px;
+            transition: all 300ms;
           }
         }
       }
@@ -1190,39 +1192,22 @@ section {
   &.theme-high-contrast {
     // #projects.theme-high-contrast .content
     .content {
+      color: rgba(255, 255, 255, 1);
+      a,
+      a:active,
+      a:visited {
+        color: rgba(255, 255, 255, 1);
+      }
       // #projects.theme-high-contrast .content > .main
       > .main {
-        background: #000000;
-        border-top: 3px solid #ffffff;
-        border-bottom: 3px solid #ffffff;
-        // #projects.theme-high-contrast .content > .main > .item
+        background: rgba(0, 0, 0, 1);
+        border-top: 3px solid rgb(255, 255, 255);
+        border-bottom: 3px solid rgb(255, 255, 255);
+        // #projects.theme-original .content > .item > .wrap
         > .item {
-          color: #ffffff;
-          background: #000000;
-          // #projects.theme-high-contrast .content > .main > .item > .wrap
           > .wrap {
-            // #projects.theme-high-contrast .content > .main > .item > .wrap > .link
-            > .link {
-              // #projects.theme-high-contrast .content > .main > .item > .wrap > .link a
-              a,
-              a:active,
-              a:visited {
-                color: #ffffff;
-                text-decoration: none;
-              }
-            }
-          }
-          // #projects.theme-original .content > .main > .item:hover
-          &:hover {
-            border: 1px solid #ffffff;
-            // #projects.theme-original .content > .main > .item:hover > .image
-            > .image {
-              // #projects.theme-original .content > .main > .item:hover > .image > img
-              > img {
-                -webkit-filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2));
-                filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2));
-              }
-            }
+            background: rgba(0, 0, 0, 1);
+            border: 1px solid rgb(255, 255, 255);
           }
         }
       }
@@ -1232,41 +1217,22 @@ section {
   &.theme-original {
     // #projects.theme-original .content
     .content {
+      color: rgba(51, 51, 51, 1);
+      a,
+      a:active,
+      a:visited {
+        color: rgba(51, 51, 51, 1);
+      }
       // #projects.theme-original .content > .main
       > .main {
-        background: #f7f7f7;
-        border-top: 5px double #333333;
-        border-bottom: 5px double #333333;
-        // #projects.theme-original .content > .main > .item
+        // background: rgba(247, 247, 247, 1);
+        // border-top: 5px double rgb(51, 51, 51);
+        // border-bottom: 5px double rgb(51, 51, 51);
+        // #projects.theme-original .content > .item > .wrap
         > .item {
-          color: #333333;
-          background: rgba(247, 247, 247, 0.5);
-          // #projects.theme-original .content > .main > .item > .wrap
           > .wrap {
-            // #projects.theme-original .content > .main > .item > .wrap > .link
-            > .link {
-              // #projects.theme-original .content > .main > .item > .wrap > .link a
-              a,
-              a:active,
-              a:visited {
-                color: #333333;
-                text-decoration: none;
-              }
-            }
-          }
-          // #projects.theme-original .content > .main > .item:hover
-          &:hover {
-            background: rgba(255, 255, 255, 0.5);
-            -webkit-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
-            // #projects.theme-original .content > .main > .item:hover > .image
-            > .image {
-              // #projects.theme-original .content > .main > .item:hover > .image > img
-              > img {
-                -webkit-filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2));
-                filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2));
-              }
-            }
+            background: rgba(247, 247, 247, 0.7);
+            box-shadow: 0 0 10px 1px rgba(247, 247, 247, 1);
           }
         }
       }
@@ -1563,8 +1529,8 @@ section {
         justify-content: center;
         z-index: -5;
         transition: all 300ms;
-        // #jobs .gallery > .main > .item.show
-        &.show {
+        // #jobs .gallery > .main > .item.active
+        &.active {
           opacity: 1;
           z-index: 998;
           transition: all 300ms;
@@ -1622,6 +1588,10 @@ section {
           scroll-snap-align: start;
           cursor: pointer;
           background: #000000;
+          // #jobs .gallery > .bottom > .list > .item.active
+          &.active {
+            border: 5px solid #0090ce;
+          }
           // #jobs .gallery > .bottom > .list > .item > img
           > img {
             width: 100%;
